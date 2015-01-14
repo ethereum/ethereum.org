@@ -1,4 +1,3 @@
-Router.route("/", function(){
-  this.layout("mainLayout");
-  this.render("homePage");
-}, {name: "home"});
+Router.route("/",{
+  name: "home"
+});
