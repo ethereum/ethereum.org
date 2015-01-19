@@ -1,3 +1,5 @@
+//TODO: modularise if this ever grows
+
 AppController = RouteController.extend({
   layoutTemplate: "appLayout",
   action: function(){
@@ -8,5 +10,14 @@ AppController = RouteController.extend({
 HomeController = AppController.extend({
   action: function(){
     this.render("homePage");
+  }
+});
+
+AdminSignInController = AppController.extend({
+  subsciptions: function(){
+    return Meteor.subscribe("users");
+  },
+  action: function(){
+    this.render("adminSignInPage");
   }
 });

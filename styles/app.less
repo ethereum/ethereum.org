@@ -1,0 +1,32 @@
+@import "lib/colors.less";
+
+#ethereum-org{
+  body{
+    font-family: 'Roboto-Light', sans-serif;
+    color: @normal-color;
+  }
+  .text-highlight{
+    color: @dark-color;
+  }
+  a {
+    color: @infusion-color;
+    &:hover {
+      color: @infusion-dark-color;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+  .btn{
+    border-radius: 0;
+    border: 0;
+  }
+  .btn-primary{
+    background-color: @infusion-dark-color;
+  }
+  input[type=text],input[type=password]{
+    border-radius:0;
+  }
+  .well{
+    border-radius: 0;
+  }
+}
