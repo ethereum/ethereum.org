@@ -3,19 +3,24 @@
     <div class="navbar-inner">
       <div class="container">
         <div class="row">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="{{pathFor "home"}}">
-              <img src="/images/ethereum-icon-inverted.svg"/>
-            </a>
+          <div class="col-md-12">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="{{pathFor "home"}}">
+                <img src="/images/ethereum-icon-inverted.svg"/>
+              </a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/#">Home</a></li>
+              <li><a href="/#">Community</a></li>
+              <li><a href="/#">Philosophy</a></li>
+              <li><a href="/#">Technology</a></li>
+              <li><a href="/#">News</a></li>
+              <li><a href="/#">Team</a></li>
+              {{#if isAdmin }}
+                <li><a href="/admin">Admin</a></li>
+              {{/if}}
+            </ul>
           </div>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="/#">Home</a></li>
-            <li><a href="/#">Community</a></li>
-            <li><a href="/#">Philosophy</a></li>
-            <li><a href="/#">Technology</a></li>
-            <li><a href="/#">News</a></li>
-            <li><a href="/#">Team</a></li>
-          </ul>
         </div>
       </div>
     </div>

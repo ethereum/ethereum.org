@@ -1,10 +1,12 @@
 @import "lib/colors.less";
+@import "lib/gradients.less";
 
+body{
+  font-family: 'Roboto-Light', sans-serif;
+  color: @normal-color;
+  margin-bottom: 60px;
+}
 #ethereum-org{
-  body{
-    font-family: 'Roboto-Light', sans-serif;
-    color: @normal-color;
-  }
   .text-highlight{
     color: @dark-color;
   }
@@ -28,5 +30,51 @@
   }
   .well{
     border-radius: 0;
+  }
+  h1, h2, h3, h4 {
+    color: @infusion-color;
+    border:0;
+  }
+  .btn {
+    text-transform: uppercase;
+    padding:12px;
+  }
+  .btn-eth{
+    color: #fff;
+    .btn-gradient;
+    transition: background 1s ease-out;
+    -webkit-transition: background 1s ease-out;
+    &:hover{
+      .btn-gradient-dark;
+    }
+  }
+}
+section{
+  margin: 10px 0;
+}
+.thefuckisthis{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 17px;
+  text-align: center;
+  color: @infusion-color;
+  border-radius: 10px;
+  border: 1px solid @light-color;
+  cursor: pointer;
+}
+.popover{
+  border-radius:0;
+  border-color: #000;
+  font-family: 'Roboto-Light', sans-serif;
+  padding: 0;
+  .popover-title{
+    background-color: #000;
+    color: #fff;
+    border-radius: 0;
+    border: 0;
+  }
+  .arrow{
+    border-right-color: #000 !important;
   }
 }
