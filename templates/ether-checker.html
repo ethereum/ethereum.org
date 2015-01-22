@@ -2,12 +2,22 @@
   <section id="ether-checker">
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-9">
           <div class="pull-left">
             <p>
               Estimated Ether purchased
-              <span class="thefuckisthis" data-toggle="popover" data-trigger="hover" tabindex="0" title="Ether checker" data-container="body" data-placement="right" data-content="If you have already purchased ether, you can check your account balance by entering your address here.">?</span>
+              <span class="popup-ether" data-toggle="popover" data-trigger="hover" tabindex="0" title="Estimated Ether Purchased" data-container="body" data-placement="right" data-content="Total amount of Ether estimated to have been purchased in the pre-sale.">?</span>
             </p>
+            <div class="ether-purchased">
+              60,102,216<span>ETH</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <span>Check your Ether balance</span>
+          <span class="popup-ether" data-toggle="popover" data-trigger="hover" tabindex="0" title="Ether checker" data-container="body" data-placement="left" data-content="If you have already purchased ether, you can check your account balance by entering your address here.">?</span>
+          <div class="ether-input">
+             <input type="text" id="input-check-ether" placeholder="Enter wallet address"> <input type="button" value="CHECK" id="btn-check-ether" class="btn btn-primary btn-small">
           </div>
         </div>
       </div>
