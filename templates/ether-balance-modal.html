@@ -1,0 +1,28 @@
+<template name="etherBalanceModal">
+  <div id="ether-balance-modal" class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        
+          <div class="modal-header">
+            Your Ether balance
+          </div>
+          <div class="modal-body">
+            <p>
+              {{body}}
+            </p>
+            {{#if bodySecondary }}
+              <p class="secondary">
+                {{bodySecondary}}
+              </p>
+            {{/if}}
+          </div>
+        
+        <div class="modal-footer">
+          <button class="btn btn-eth" data-dismiss="modal">
+            Ok
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

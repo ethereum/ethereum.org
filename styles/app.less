@@ -51,6 +51,33 @@ body{
     font-size: 14px;
     padding:12px;
   }
+  .modal-content{
+    border-radius: 0;
+    border:0;
+  }
+  .modal-header{
+    border:0;
+    background-color: #000;
+    color: #fff;
+    font-family: Roboto-Thin;
+    font-size:18px;
+  }
+  .modal-body{
+    p{
+      margin: 0 0 10px 0;
+      &:first-of-type{
+        margin-top: 10px;
+      }
+      &.secondary{
+        font-size: 12px;
+        color: @light-color;
+      }
+    }
+  }
+  .modal-footer{
+    padding: 10px;
+    border-top: 1px solid @light-color;
+  }
 }
 section{
   margin: 10px 0;
