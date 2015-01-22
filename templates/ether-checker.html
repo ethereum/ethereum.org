@@ -2,12 +2,29 @@
   <section id="ether-checker">
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-4">
           <div class="pull-left">
             <p>
               Estimated Ether purchased
               <span class="thefuckisthis" data-toggle="popover" data-trigger="hover" tabindex="0" title="Ether checker" data-container="body" data-placement="right" data-content="If you have already purchased ether, you can check your account balance by entering your address here.">?</span>
             </p>
+            <p>
+              <span class="important">
+                {{totalEther}}
+              </span>
+              ETH
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 col-md-offset-4">
+          <div class="pull-right check-balance">
+            <p>
+              Check your Ether balance
+            </p>
+            <form>
+              <input type="text" name="address" placeholder="Ether address" value="b6e6c3222b6b6f9be2875d2a89f127fb64100fe2"/>
+              <input class="btn btn-eth" type="submit" value="Check"/>
+            </form>
           </div>
         </div>
       </div>
