@@ -16,6 +16,8 @@ boilerplate-generator@1.0.2
 callback-hook@1.0.2
 check@1.0.4
 coffeescript@1.0.5
+danielqiu:feed@0.0.5
+dbeath:feedparser@0.16.6
 ddp@1.0.14
 deps@1.0.6
 ejson@1.0.5
@@ -51,6 +53,8 @@ minimongo@1.0.6
 mobile-status-bar@1.0.2
 momentjs:moment@2.8.4
 mongo@1.0.11
+mrt:smart-publish@0.1.7
+mrt:twit@0.2.0
 npm-bcrypt@0.7.7
 observe-sequence@1.0.4
 ordered-dict@1.0.2

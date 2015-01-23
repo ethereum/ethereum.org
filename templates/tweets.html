@@ -1,0 +1,17 @@
+<template name="tweets">
+  <h2>Twitter</h2>
+  {{#each this}}
+    <div class="tweet">
+      <div class="tweet-meta">
+        <strong>{{author}}</strong>
+        <a href="{{link}}">@ethereumproject</a>
+        •
+        {{formatDate pubdate "MMM D"}}
+        <img src="/images/ethereum-icon.svg"/>
+      </div>
+      <div class="summary">
+        {{summary}}
+      </div>
+    </div>
+  {{/each}}
+</template>
