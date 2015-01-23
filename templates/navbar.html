@@ -10,12 +10,24 @@
               </a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="/#">Home</a></li>
-              <li><a href="/#">Community</a></li>
-              <li><a href="/#">Philosophy</a></li>
-              <li><a href="/#">Technology</a></li>
-              <li><a href="{{pathFor "news"}}">News</a></li>
-              <li><a href="/#">Team</a></li>
+              <li>
+                <a class="{{activeForRoute "home"}}" href="{{pathFor "home"}}">Home</a>
+              </li>
+              <li>
+                <a class="{{activeForRoute "community"}}" href="/#">Community</a>
+              </li>
+              <li>
+                <a class="{{activeForRoute "philosophy"}}" href="/#">Philosophy</a>
+              </li>
+              <li>
+                <a class="{{activeForRoute "technology"}}" href="/#">Technology</a>
+              </li>
+              <li>
+                <a class="{{activeForRoute "news"}}" href="{{pathFor "news"}}">News</a>
+              </li>
+              <li>
+                <a class="{{activeForRoute "team"}}" href="/#">Team</a>
+              </li>
               {{#if isAdmin }}
                 <li><a href="/admin">Admin</a></li>
               {{/if}}
