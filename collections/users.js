@@ -24,18 +24,3 @@ Meteor.users.attachSchema(new SimpleSchema({
   }
 }));
 
-// if(Meteor.isServer){
-//   Meteor.publish("userData", function(){
-//     return Meteor.users.find({_id: this.userId});
-//   });
-//   Meteor.publish("allUserData", function(){
-//     return Meteor.users.find({}, {
-//       fields: {
-//         username: 1
-//       }
-//     });
-//   });
-// }else{
-//   Meteor.subscribe("userData");
-//   Meteor.subscribe("allUserData");
-// }

@@ -8,8 +8,6 @@ var blockchainUrl = "https://blockchain.info",
     decreaseAmountPerDay = 30;
 
 Template.etherChecker.rendered = function(){
-  console.log("rendered etherCHecker");
-
   $(".thefuckisthis").popover();
 };
 
