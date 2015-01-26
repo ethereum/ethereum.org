@@ -1,0 +1,14 @@
+<template name="blogPosts">
+  <h2>Blog</h2>
+  {{#each this }}
+    <h3>
+      <a href="{{link}}">{{title}}</a>
+    </h3>
+    <p>
+      Posted by <strong>{{author}}</strong> on {{formatDate pubdate "MMMM Do YYYY"}}.
+    </p>
+    <div class="summary text-justify">
+      {{> blogPostSummary summary }}
+    </div>
+  {{/each}}
+</template>

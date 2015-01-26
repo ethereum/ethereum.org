@@ -13,11 +13,44 @@ HomeController = AppController.extend({
   }
 });
 
+TechnologyController = AppController.extend({
+  action: function(){
+    this.render("technologyPage");
+  }
+});
+
+PhilosophyController = AppController.extend({
+  action: function(){
+    this.render("philosophyPage");
+  }
+});
+
+TeamController = AppController.extend({
+  action: function(){
+    this.render("teamPage");
+  }
+});
+
 AdminSignInController = AppController.extend({
   subsciptions: function(){
     return Meteor.subscribe("users");
   },
   action: function(){
     this.render("adminSignInPage");
+  }
+});
+
+NewsController = AppController.extend({
+  subscriptions: function(){
+    Meteor.subscribe("feed_entries");
+  },
+  data: function(){
+    return {
+      blogFeed: FeedEntries.find({feed_category: "Blog"}, {limit: 3}),
+      tweets: FeedEntries.find({feed_category: "Twitter"}, {limit: 5})
+    };
+  },
+  action: function(){
+    this.render("newsPage");
   }
 });

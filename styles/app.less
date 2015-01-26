@@ -43,9 +43,14 @@ body{
   .well{
     border-radius: 0;
   }
-  h1, h2, h3, h4 {
+  h2, h3, h4 {
     color: @infusion-color;
     border:0;
+  }
+  h1{
+    border:0;
+    color:@title-color;
+    text-transform: uppercase;
   }
   .btn {
     text-transform: uppercase;
@@ -90,6 +95,9 @@ body{
     padding: 10px;
     border-top: 1px solid @light-color;
   }
+  strong{
+    font-family: Roboto-Medium;
+  }
 }
 section{
   margin: 10px 0;
@@ -118,5 +126,15 @@ section{
   }
   .arrow{
     border-right-color: #000 !important;
+  }
+}
+
+.container{
+  .right-dl{
+    border-right: 1px solid @light-color;
+  }
+  .left-dl{
+    border-left: 1px solid @light-color;
+    margin-left: -1px;
   }
 }
