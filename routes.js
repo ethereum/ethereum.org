@@ -9,3 +9,13 @@ Router.route("/admin/signin",{
 Router.route("/news",{
   name: "news"
 });
+
+Router.route("/team", {
+  name: "team"
+});
+
+Router.route("/team/edit", {
+  name: "team.edit",
+  controller: "TeamController",
+  action: "edit"
+});

@@ -1,4 +1,4 @@
-_.each({
+var helpers = {
   isAdmin: function(u){
     var user = u || Meteor.user();
 
@@ -6,10 +6,9 @@ _.each({
   },
   formatDate: function(date, format){
     return moment(date).format(format);
-  },
-  activeForRoute: function(route){
-    return (Router.current().route.getName() === route) && "active";
   }
-}, function(fn, name){
+};
+
+_.each(helpers, function(fn, name){
   Template.registerHelper(name, fn);
 });
