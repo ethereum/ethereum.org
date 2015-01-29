@@ -9,5 +9,16 @@ AdminConfig = {
     TeamMembers: {},
     News: {},
     Meetups: {}
+  },
+  dashboard: {
+    widgets: [{
+      template: "customAdminLinks"
+    },{
+      template: 'adminCollectionWidget',
+      data:{
+        collection: 'Users',
+        class: 'col-lg-3 col-xs-6'
+      }
+    }]
   }
 };
