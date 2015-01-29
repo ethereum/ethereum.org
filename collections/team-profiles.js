@@ -5,12 +5,10 @@ TeamProfiles.attachSchema(new SimpleSchema({
     type: String
   },
   title: {
-    type: String,
-    optional: true
+    type: String
   },
   photoId: {
     type: String,
-    optional: true,
     autoform: {
       afFieldInput:{
         type: "fileUpload",

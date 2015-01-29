@@ -12,13 +12,12 @@ AutoForm.hooks({
         //updating old prev/next
 
         TeamProfilesLinkedList.linkSibblings(doc, function(){
-          console.log("in");
           //setting new next:
           var next = TeamProfilesLinkedList.findNext(mod.$set.prev);
           if(next && (next !== id)){
-            mod.$set.next = next;
+            (mod.$set = mod.$set || {}).next = next;
           } else{
-            mod.$unset.next = 1;
+            (mod.$unset = mod.$unset || {}).next = 1;
           }
 
           //updating new prev/next
