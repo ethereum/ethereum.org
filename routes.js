@@ -10,6 +10,7 @@ Router.route("/news",{
   name: "news"
 });
 
+
 Router.route("/team", {
   name: "team"
 });
@@ -19,3 +20,16 @@ Router.route("/team/edit", {
   controller: "TeamController",
   action: "edit"
 });
+
+Router.route("/community",{
+  name: "community"
+});
+
+Router.route("/philosophy",{
+  name: "philosophy"
+});
+
+Router.route("/technology",{
+  name: "technology"
+});
+

@@ -6,6 +6,9 @@ body{
   color: @normal-color;
   margin-bottom: 60px;
 }
+
+
+
 #ethereum-org{
   .text-highlight{
     color: @dark-color;
@@ -22,18 +25,32 @@ body{
     border-radius: 0;
     border: 0;
   }
+  .btn-small{
+    height:30px;
+    padding:5px 15px !important;
+    margin-top:-3px;
+    font-size:11px;
+    border-radius:3px;
+  }
   .btn-primary{
     background-color: @infusion-dark-color;
   }
   input[type=text],input[type=password]{
-    border-radius:0;
+    border-radius:3px;
+    border:1px solid #ddd;
+    padding:5px;
   }
   .well{
     border-radius: 0;
   }
-  h1, h2, h3, h4 {
+  h2, h3, h4 {
     color: @infusion-color;
     border:0;
+  }
+  h1{
+    border:0;
+    color:@title-color;
+    text-transform: uppercase;
   }
   .btn {
     text-transform: uppercase;
