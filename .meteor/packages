@@ -27,3 +27,4 @@ cfs:standard-packages
 cfs:filesystem
 cfs:s3
 dburles:collection-helpers
+peerlibrary:async

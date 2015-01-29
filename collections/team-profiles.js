@@ -5,7 +5,8 @@ TeamProfiles.attachSchema(new SimpleSchema({
     type: String
   },
   title: {
-    type: String
+    type: String,
+    optional: true
   },
   photoId: {
     type: String,
