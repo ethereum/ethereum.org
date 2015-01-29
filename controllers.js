@@ -13,6 +13,24 @@ HomeController = AppController.extend({
   }
 });
 
+TechnologyController = AppController.extend({
+  action: function(){
+    this.render("technologyPage");
+  }
+});
+
+PhilosophyController = AppController.extend({
+  action: function(){
+    this.render("philosophyPage");
+  }
+});
+
+TeamController = AppController.extend({
+  action: function(){
+    this.render("teamPage");
+  }
+});
+
 AdminSignInController = AppController.extend({
   subsciptions: function(){
     return Meteor.subscribe("users");
