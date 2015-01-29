@@ -1,3 +1,9 @@
+var resizeCB = function(){};
+
+$(window).resize(function(){
+  resizeCB();
+});
+
 Template.community.rendered = function(){
   var centered;
 
@@ -61,9 +67,14 @@ Template.community.rendered = function(){
 
   });
 
-  function clicked(d) {
-    var x, y, k;
+  var x = width / 2,
+      y = height / 2,
+      k = 1;
 
+
+  function clicked(d) {
+    g.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")");
+    
     if (d && centered !== d) {
       var centroid = path.centroid(d);
       x = centroid[0];
@@ -86,7 +97,7 @@ Template.community.rendered = function(){
       .style("stroke-width", 1.5 / k + "px");
   }
 
-  var resize = _.debounce(function () {
+  resizeCB = _.debounce(function () {
     console.log("resize");
     var width = $('#meetupmap').outerWidth(),
         height = $("#meetupmap").outerHeight(),
@@ -107,8 +118,6 @@ Template.community.rendered = function(){
   }, 200);
   // responsive
 
-  $(window).off("resize", resize);
-  $(window).on("resize", resize);
 };
 
 Template.community.events({
