@@ -8,14 +8,14 @@ Meteor.startup(function(){
     _id: "Ethereum blog",
     category: "Blog",
     link: Meteor.settings.ETH_BLOG_FEED,
-    refresh_interval: 10000
+    refresh_interval: 60000
   });
   
   Feed.createTwitterFeed({
     _id: "Ethereum Twitter",
     category: "Twitter",
     link: Meteor.settings.TWITTER_LINK,
-    refresh_interval: 2000
+    refresh_interval: 60000
   });
 
   Feed.initTwitterFeed({

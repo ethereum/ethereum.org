@@ -46,11 +46,44 @@ NewsController = AppController.extend({
   },
   data: function(){
     return {
-      blogFeed: FeedEntries.find({feed_category: "Blog"}, {limit: 3}),
-      tweets: FeedEntries.find({feed_category: "Twitter"}, {limit: 5})
+      blogFeed: FeedEntries.find({feed_category: "Blog"}, {limit: 3, sort: {pubdate: -1}}),
+      tweets: FeedEntries.find({feed_category: "Twitter"}, {limit: 5, sort: {pubdate: -1}})
     };
   },
   action: function(){
     this.render("newsPage");
+  }
+});
+
+TeamController = AppController.extend({
+  subscriptions: function(){
+    this.subscribe("teamProfiles");
+    this.subscribe("images");
+  },
+  data: function(){
+    var profiles = TeamProfiles.find().fetch(),
+        indexed = _.indexBy(profiles, "_id"),
+        ordered = [],
+        current = _.find(profiles, function(p){ return !p.prev;});
+
+    while(current){
+      ordered.push(current);
+      current = indexed[current.next];
+      if(ordered.length > profiles.length){
+        // loop detected, cancel!  (update might be still in progress)
+        ordered = profiles;
+        break;
+      }
+    }
+    
+    return {
+      teamProfiles: ordered
+    };
+  },
+  action: function(){
+    this.render("teamPage");
+  },
+  edit: function(){
+    this.render("editTeamPage");
   }
 });

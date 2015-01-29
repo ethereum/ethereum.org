@@ -1,0 +1,23 @@
+<template name="teamProfileFields">
+  <img src="{{photo.url}}" class="profile-photo"/>
+  <p>
+    {{name}}
+  </p>
+  <p>
+    {{title}}
+  </p>
+</template>
+
+<template name="teamProfiles">
+  {{#each teamProfiles }}
+    <div class="col-md-3 col-lg-2 col-sm-4 team-profile">
+      {{#if isActiveRoute regex='team.edit'}}
+        <a edit-profile data-id="{{_id}}">
+          {{>teamProfileFields}}
+        </a>
+      {{else}}
+        {{>teamProfileFields}}
+      {{/if}}
+    </div>
+  {{/each}}
+</template>

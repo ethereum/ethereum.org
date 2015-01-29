@@ -20,6 +20,11 @@ http
 danielqiu:feed
 momentjs:moment
 mrt:smart-publish
-meteorhacks:npm
-npm-container
-
+raix:handlebar-helpers
+zimme:iron-router-active
+yogiben:autoform-file
+cfs:standard-packages
+cfs:filesystem
+cfs:s3
+dburles:collection-helpers
+peerlibrary:async

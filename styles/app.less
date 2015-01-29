@@ -21,6 +21,9 @@ body{
       cursor: pointer;
     }
   }
+  .page{
+    padding-bottom: 30px;
+  }
   .btn{
     border-radius: 0;
     border: 0;
@@ -55,6 +58,13 @@ body{
   .btn {
     text-transform: uppercase;
   }
+  .btn-danger{
+    color: #fff;
+    &:hover{
+      color: #fff;
+      
+    }
+  }
   .btn-eth{
     color: #fff;
     .btn-gradient;
@@ -62,7 +72,11 @@ body{
     -webkit-transition: background 1s ease-out;
     &:hover{
       .btn-gradient-dark;
+      color: #fff;
     }
+  }
+  .btn-default{
+    border: 1px solid @light-color;
   }
   .btn-lg{
     font-size: 14px;

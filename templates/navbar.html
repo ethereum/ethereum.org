@@ -11,22 +11,22 @@
             </div>
             <ul class="nav navbar-nav navbar-right">
               <li>
-                <a class="{{activeForRoute "home"}}" href="{{pathFor "home"}}">Home</a>
+                <a class="{{isActiveRoute regex='home'}}" href="{{pathFor "home"}}">Home</a>
               </li>
               <li>
-                <a class="{{activeForRoute "community"}}" href="/#community">Community</a>
+                <a class="{{isActiveRoute regex='community'}}" href="/#">Community</a>
               </li>
               <li>
-                <a class="{{activeForRoute "philosophy"}}" href="{{pathFor "philosophy"}}">Philosophy</a>
+                <a class="{{isActiveRoute regex='philosophy'}}" href="/#">Philosophy</a>
               </li>
               <li>
-                <a class="{{activeForRoute "technology"}}" href="{{pathFor "technology"}}">Technology</a>
+                <a class="{{isActiveRoute regex='technology'}}" href="/#">Technology</a>
               </li>
               <li>
-                <a class="{{activeForRoute "news"}}" href="{{pathFor "news"}}">News</a>
+                <a class="{{isActiveRoute regex='news'}}" href="{{pathFor "news"}}">News</a>
               </li>
               <li>
-                <a class="{{activeForRoute "team"}}" href="{{pathFor "team"}}">Team</a>
+                <a class="{{isActiveRoute regex='team'}}" href="{{pathFor "team"}}">Team</a>
               </li>
               {{#if isAdmin }}
                 <li><a href="/admin">Admin</a></li>
