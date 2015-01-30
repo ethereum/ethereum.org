@@ -5,14 +5,46 @@
 	.meetup-img{
 		width:190px;
 		height:120px;
-		border:1px solid #ddd;
+		border:1px solid #aaa;
 		float:left;
 		margin-right:20px;
 		margin-bottom:20px;
+		overflow:hidden;
+		position: relative;
+
+		span{
+			z-index:100;
+			position:absolute;
+			top:50px;
+			bottom:0;
+			width:100%;
+			display:block;
+			text-align:center;
+			background:black;
+			color:white;
+			height:20px;
+			opacity:0;
+			pointer-events: none;
+		}
+		img{
+			width:115%;
+			z-index:50;
+		}
+		&:hover span{
+			opacity:100;
+		}
+
+
 	}
 
 	.btn-meetup-img{
-		height:120px;
-
+		height:120px;	
+		color:white;
+		padding-top:50px;
+		
+		&:hover{
+			color:white;
+			background:#1a1a1a;
+		}
 	}
 }
