@@ -15,7 +15,7 @@ Router.route("/community",{
 });
 
 Router.route("/philosophy",{
-  name: "philosophy"
+  name: "philosophy",
 });
 
 Router.route("/technology",{
