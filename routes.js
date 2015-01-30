@@ -32,3 +32,4 @@ Router.route("/team/edit", {
   action: "edit"
 
 });
+

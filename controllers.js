@@ -70,7 +70,9 @@ TeamController = AppController.extend({
       ordered.push(current);
       current = indexed[current.next];
       if(ordered.length > profiles.length){
-        throw new Error("Team profile list loop detected!");
+        // loop detected, cancel!  (update might be still in progress)
+        ordered = profiles;
+        break;
       }
     }
     

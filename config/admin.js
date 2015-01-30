@@ -9,6 +9,7 @@ AdminConfig = {
     TeamMembers: {},
     News: {},
     Meetups: {}
+
   },
   dashboard: {
     widgets: [{

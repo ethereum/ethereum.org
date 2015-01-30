@@ -24,6 +24,15 @@ Template.editTeamProfileModal.helpers({
   }
 });
 
-Template.editTeamProfileModal.helpers({
-  
+Template.editTeamProfileModal.events({
+  "click [delete-profile]": function(){
+    var id = Session.get("editTeamProfile_currentProfileId");
+
+    if(!id) throw new Error("Delete profile: no current profile id set!");
+    
+    TeamProfilesLinkedList.linkSibblings(TeamProfiles.findOne(id), function(){
+      TeamProfiles.remove(id);
+      $("#edit-team-profile-modal").modal("hide");
+    });
+  }
 });
