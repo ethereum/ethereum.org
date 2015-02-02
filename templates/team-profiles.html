@@ -1,23 +1,74 @@
-<template name="teamProfileFields">
-  <img src="{{photo.url}}" class="profile-photo"/>
-  <p>
-    {{name}}
-  </p>
-  <p>
-    {{title}}
-  </p>
-</template>
-
 <template name="teamProfiles">
-  {{#each teamProfiles }}
-    <div class="col-md-3 col-lg-2 col-sm-4 team-profile">
-      {{#if isActiveRoute regex='team.edit'}}
-        <a edit-profile data-id="{{_id}}">
-          {{>teamProfileFields}}
-        </a>
-      {{else}}
-        {{>teamProfileFields}}
-      {{/if}}
-    </div>
-  {{/each}}
+  <div class="col-md-3 col-lg-2 col-sm-4 team-profile">
+    <img src="/profiles/STEPHAN_2.jpg" class="profile-photo"/>
+    <p class="name">
+      Stephan Tual
+    </p>
+    <p class="title">
+      Leadership
+    </p>
+  </div>
+  <div class="col-md-3 col-lg-2 col-sm-4 team-profile">
+    <img src="/profiles/GAV.jpg" class="profile-photo"/>
+    <p class="name">
+      Dr. Gavin Wood
+    </p>
+    <p class="title">
+      Leadership
+    </p>
+  </div>
+  <div class="col-md-3 col-lg-2 col-sm-4 team-profile">
+    <img src="/profiles/JOSEPH-LUBIN_BW.jpg" class="profile-photo"/>
+    <p class="name">
+      Joseph Lubin
+    </p>
+    <p class="title">
+      Leadership
+    </p>
+  </div>
+  <div class="col-md-3 col-lg-2 col-sm-4 team-profile">
+    <img src="/profiles/Jeffrey.jpg" class="profile-photo"/>
+    <p class="name">
+      Jeffrey Wilcke
+    </p>
+    <p class="title">
+      Leadership
+    </p>
+  </div>
+  <div class="col-md-3 col-lg-2 col-sm-4 team-profile">
+    <img src="/profiles/Mihai.jpg" class="profile-photo"/>
+    <p class="name">
+      Mihai Alisie
+    </p>
+    <p class="title">
+      Leadership
+    </p>
+  </div>
+  <div class="col-md-3 col-lg-2 col-sm-4 team-profile">
+    <img src="/profiles/taylor.jpg" class="profile-photo"/>
+    <p class="name">
+      Stephan Tual
+    </p>
+    <p class="title">
+      Leadership
+    </p>
+  </div>
+  <div class="col-md-3 col-lg-2 col-sm-4 team-profile">
+    <img src="/profiles/Vitalik.jpg" class="profile-photo"/>
+    <p class="name">
+      Vitalik Buterin
+    </p>
+    <p class="title">
+      Leadership
+    </p>
+  </div>
+  <div class="col-md-3 col-lg-2 col-sm-4 team-profile">
+    <img src="/profiles/Anthony-Di-Iorio.jpg" class="profile-photo"/>
+    <p class="name">
+      Anthony Di Iorio
+    </p>
+    <p class="title">
+      Leadership
+    </p>
+  </div>
 </template>

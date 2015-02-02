@@ -1,12 +1,26 @@
+@import "lib/colors";
+
 .team-profile{
   text-align: center;
+  margin-bottom: 30px;
   .profile-photo{
     width: 180px;
     height: 180px;
+    margin-bottom: 15px;
   }
   p{
     display:inline-block;
     width: 180px;
     text-align:left;
+    margin: 0;
+    &.name{
+      font-size: 18px;
+      color: @dark-color;
+      margin-bottom: 10px;
+    }
+    &.title{
+      font-size: 14px;
+      color: @light-color;
+    }
   }
 }

@@ -1,14 +1,5 @@
 <template name="teamPage">
   <div class="container">
-    {{#if isAdmin }}
-      <section class="row">
-        <div class="col-md-12">
-          {{#linkTo route="team.edit"}}
-            Edit
-          {{/linkTo}}
-        </div>
-      </section>
-    {{/if}}
     <div class="row">
       {{> teamProfiles }}
     </div>
