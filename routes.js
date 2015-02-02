@@ -30,6 +30,5 @@ Router.route("/team/edit", {
   name: "team.edit",
   controller: "TeamController",
   action: "edit"
-
 });
 
