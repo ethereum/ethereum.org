@@ -1,0 +1,28 @@
+box: kkudryavtsev/meteor
+build:
+  steps:
+    - script:
+        name: update meteor
+        code: |-
+          meteor --version
+          meteor update
+          meteor --version
+    - script:
+        name: meteor build
+        code: |-
+          meteor build build/
+deploy:
+  steps:
+    - add-to-known_hosts:
+        hostname: $TARGET_HOSTNAME
+    - add-ssh-key:
+        keyname: SSH_KEY
+    - script:
+        name: deploy the bundle
+        code: |-
+          ls build/
+          scp build/build.tar.gz $TARGET_USER@$TARGET_HOSTNAME:~
+          ssh $TARGET_USER@$TARGET_HOSTNAME "tar -xzf build.tar.gz"
+          ssh $TARGET_USER@$TARGET_HOSTNAME "cd bundle/programs/server/ && npm install"
+          ssh $TARGET_USER@$TARGET_HOSTNAME "pm2 startOrRestart $PM2_SCRIPT_PATH"
+        
