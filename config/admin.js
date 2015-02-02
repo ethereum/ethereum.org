@@ -1,4 +1,6 @@
 var defaultAdmin = (Meteor.settings || {}).DEFAULT_ADMIN_ACCOUNT;
+
+console.log(defaultAdmin);
 AdminConfig = {
   name: "ETHEREUM",
   adminEmails: defaultAdmin ? [defaultAdmin.split(":")[0]] : [],
