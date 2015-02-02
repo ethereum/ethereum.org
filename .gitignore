@@ -1,3 +1,5 @@
 config/settings.json
 .DS_Store
 */.DS_Store
+build/
+ethereum.json
