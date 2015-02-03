@@ -1,8 +1,8 @@
 @import "lib/colors.less";
 
 #navbar{
-  background-color: #000;
-  border-color: #000;
+  background-color: rgba(0,0,0,0.8);
+  border: 0;
   border-radius: 0;
   color: #fff;
   font-family: 'Roboto-Thin', sans-serif;
@@ -12,7 +12,7 @@
   a {
     padding: 20px 10px 0 10px;
     color: #fff;
-    background-color: #000;
+
     &:hover, &.active{
       color: @infusion-light-color;
     }
@@ -30,13 +30,11 @@
 
 
   .navbar-brand{
-    float:left;
     padding: 0;
-    color:white;
     img{
-      height: 50px;
-      width: 50px;
-      margin-top:3px;
+      height: 58px;
+      padding: 14px 0;
+      line-height: 60px;
     }
   }
 
