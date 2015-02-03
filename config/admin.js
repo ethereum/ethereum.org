@@ -5,18 +5,14 @@ AdminConfig = {
   adminEmails: defaultAdmin ? [defaultAdmin.split(":")[0]] : [],
   nonAdminRedirectRoute: "adminSignIn",
   collections: {
-    Users: {}
-
+    Users: {},
+    Meetups: {
+      tableColumns: [
+        {label: "City", name: "city"},
+        {label: "URL", name: "url"}
+      ]
+    }
   },
   dashboard: {
-    widgets: [{
-      template: "customAdminLinks"
-    },{
-      template: 'adminCollectionWidget',
-      data:{
-        collection: 'Users',
-        class: 'col-lg-3 col-xs-6'
-      }
-    }]
   }
 };

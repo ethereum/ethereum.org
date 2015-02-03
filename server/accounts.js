@@ -6,8 +6,6 @@ Meteor.startup(function(){
         pass = defaultAdmin.split(":")[1];
     
     if(!Meteor.users.findOne({ "emails.address": email })){
-      console.log("creating a default user account for", email);
-
       Accounts.createUser({
         email: email,
         password: pass

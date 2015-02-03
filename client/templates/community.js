@@ -36,28 +36,6 @@ Template.community.rendered = function(){
   // load and display the world
   d3.json("/world.json", function(error, topology) {
 
-    // load and display the cities
-    d3.csv("/meetup-cities.csv", function(error, data) {
-      g.selectAll(".point")
-        .data(data)
-        .enter()
-        .append("a")
-        .attr("data-href", function(d){ return d.url; })//hackaround for iron:router link bug
-        .attr("xlink:show", "new")
-        .append("circle")
-        .attr("cx", function(d) { return projection([d.lon, d.lat])[0]; })
-        .attr("cy", function(d) { return projection([d.lon, d.lat])[1]; })
-        .attr("r", 4)
-        .style("stroke", "black")
-        .style("stroke-width", 1)
-        .style("fill", "#aab5de")
-        .call(
-          d3.helper.tooltip()
-            .attr({'class': 'meetup-tooltip'})
-            .text(function(d) { return d.city; })
-        );
-    });
-
     g.selectAll("path")
       .data(topojson.feature(topology, topology.objects.countries).features)
       .enter()
@@ -65,6 +43,24 @@ Template.community.rendered = function(){
       .attr("d", path)
       .on("click", clicked);
 
+    g.selectAll(".point")
+      .data(Meetups.find().fetch())
+      .enter()
+      .append("a")
+      .attr("data-href", function(d){ return d.url; })//hackaround for iron:router link bug
+      .attr("xlink:show", "new")
+      .append("circle")
+      .attr("cx", function(d) { return projection([d.lon, d.lat])[0]; })
+      .attr("cy", function(d) { return projection([d.lon, d.lat])[1]; })
+      .attr("r", 4)
+      .style("stroke", "black")
+      .style("stroke-width", 1)
+      .style("fill", "#aab5de")
+      .call(
+        d3.helper.tooltip()
+          .attr({'class': 'meetup-tooltip'})
+          .text(function(d) { return d.city; })
+      );
   });
 
   var x = width / 2,
@@ -120,8 +116,17 @@ Template.community.rendered = function(){
 
 };
 
+Template.community.helpers({
+  unfeaturedMeetupCount: function(){
+    return Meetups.find({featured: {$not: true}}).count();
+  }
+});
+
 Template.community.events({
   "click #meetupmap a": function(e){
     window.location = $(e.currentTarget).data("href");
   }
 });
+
+
+

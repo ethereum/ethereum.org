@@ -22,9 +22,9 @@ momentjs:moment
 mrt:smart-publish
 raix:handlebar-helpers
 zimme:iron-router-active
-yogiben:autoform-file
 dburles:collection-helpers
 peerlibrary:async
 d3
 mrt:topojson
 
+harrison:babyparse

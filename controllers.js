@@ -8,6 +8,12 @@ AppController = RouteController.extend({
 });
 
 HomeController = AppController.extend({
+  data: function(){
+    return {
+      featuredMeetups: Meetups.find({featured: true}),
+      meetups: Meetups.find()
+    };
+  },
   action: function(){
     this.render("homePage");
   }

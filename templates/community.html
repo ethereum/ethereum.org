@@ -1,46 +1,32 @@
 <template name="community">
   <section id="community">
     <a name="community"></a>
-  	<div class="container">
+    <div class="container">
       <div class="row">
         <div class="col-md-12">
-         <h2>COMMUNITY</h2>
-         <p>Ethereum has a vibrant worldwide community. We are lucky to have meetups in over 50 cities around the world organized by community members like you. If you don't see a meetup near you, <a href="https://forum.ethereum.org/discussion/171/how-to-start-an-ethereum-meetup-faq" target="_blank">start one</a>!</p>
+          <h2>COMMUNITY</h2>
+          <p>Ethereum has a vibrant worldwide community. We are lucky to have meetups in over 50 cities around the world organized by community members like you. If you don't see a meetup near you, <a href="https://forum.ethereum.org/discussion/171/how-to-start-an-ethereum-meetup-faq" target="_blank">start one</a>!</p>
         </div>
-	    </div>
+      </div>
       <div class="row">
         <div class="col-md-4">
-          <div class="toplinks">
-            <div>
-              <a href="http://www.meetup.com/ethereum/">London</a>
-              <a href="http://www.meetup.com/EthereumSiliconValley/">Silicon Valley</a></div>
-            <div>
-              <a href="www.meetup.com/Berlin-Ethereum-Meetup/">Berlin</a>
-              <a href="www.meetup.com/Amsterdam-Ethereum-Meetup/">Amsterdam</a>
+          <div class="container-fluid meetup-list">
+            <div class="row">
+              {{#each featuredMeetups}}
+                <div class="col-md-6">
+                  <a href="{{url}}" class="meetup">{{city}}</a>
+                </div>
+              {{/each}}
+              <div class="col-md-6">
+                <a href="https://forum.ethereum.org/discussion/797/list-of-ethereum-specific-meetups-live-updates" target="_blank" class="morelinks">{{unfeaturedMeetupCount}} more...</a>
+              </div>
             </div>
           </div>
-
-          <div class="bottomlinks">
-            <ul>
-              <li><a href="http://www.meetup.com/Bitcoin-Toronto/" target="_blank">Toronto</a></li>
-              <li><a href="http://www.meetup.com/Ethereum-Paris/" target="_blank">Paris</a></li>
-              <li><a href="http://www.meetup.com/Chicago-Ethereum-Meetup/" target="_blank">Chicago</a></li>
-              <li><a href="http://www.meetup.com/San-Diego-Ethereum-Meetup/" target="_blank">San Diego</a></li>
-            </ul>
-             <ul>
-              <li><a href="http://www.meetup.com/Melbourne-Ethereum-Meetup/" target="_blank">Melbourne</a></li>
-              <li><a href="http://www.meetup.com/Vancouver-Ethereum-Meetup/" target="_blank">Vancouver</a></li>
-              <li><a href="http://www.meetup.com/NYC_Ethereum/" target="_blank">New York City</a></li>
-              <li><a href="http://www.meetup.com/Ethereum-Denver/" target="_blank">Denver</a></li>
-            </ul>
-            <a href="https://forum.ethereum.org/discussion/797/list-of-ethereum-specific-meetups-live-updates" target="_blank" class="morelinks">40 more...</a>
-          </div>
-          
         </div>
         <div class="col-md-8">
           <div id="meetupmap"></div>
         </div>
       </div>
-	  </div>
+    </div>
   </section>
 </template>
