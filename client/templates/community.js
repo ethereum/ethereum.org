@@ -54,8 +54,8 @@ Template.community.rendered = function(){
       .attr("cy", function(d) { return projection([d.lon, d.lat])[1]; })
       .attr("r", 4)
       .style("stroke", "black")
-      .style("stroke-width", 1)
-      .style("fill", "#aab5de")
+      .style("stroke-width", 0.25)
+      .style("fill", "#6691c0")
       .call(
         d3.helper.tooltip()
           .attr({'class': 'meetup-tooltip'})

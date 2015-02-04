@@ -4,15 +4,29 @@
 #opener{
   position:relative;
   padding-bottom:0;
-  margin-bottom:0;
+  margin: 0;
 
   video{
     width:100%;
-    height:94vh;
-    margin-top:-20px;
+    height:86vh;
     background:white;
+    position: relative;
+    top: -30px;
+    z-index: 99;
   }
-  .light-grey-gradient;
+  .background{
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right: 0;
+    z-index:100;
+    .light-grey-gradient;
+  }
+  .links-container{
+    position: relative;
+    z-index: 101;
+  }
   
   .learn-more{
     margin-bottom:10px !important;
@@ -22,7 +36,7 @@
   .left-container{
     position: absolute;
     left: -15px;
-    bottom: 6px;
+    bottom: -16px;
     .ethdev-logo{
       height: 150px;
       margin-left: -28px;
@@ -31,7 +45,7 @@
   .right-container{
     position: absolute;
     right: 15px;
-    bottom: 70px;
+    bottom: 50px;
     width: 200px;
     .btn{
       margin: 0;

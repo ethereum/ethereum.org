@@ -9,7 +9,8 @@ AdminConfig = {
     Meetups: {
       tableColumns: [
         {label: "City", name: "city"},
-        {label: "URL", name: "url"}
+        {label: "URL", name: "url"},
+        {label: "Featured", name: "featured"}
       ]
     }
   },
