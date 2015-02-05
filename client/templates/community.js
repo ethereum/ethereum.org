@@ -94,7 +94,6 @@ Template.community.rendered = function(){
   }
 
   resizeCB = _.debounce(function () {
-    console.log("resize");
     var width = $('#meetupmap').outerWidth(),
         height = $("#meetupmap").outerHeight(),
         projection = d3.geo.mercator()
