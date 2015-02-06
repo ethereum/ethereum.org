@@ -32,6 +32,4 @@ if(Meteor.isServer){
   Meteor.publish("meetups", function(){
     return Meetups.find();
   });
-}else{
-  Meteor.subscribe("meetups");
 }

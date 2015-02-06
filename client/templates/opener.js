@@ -6,9 +6,14 @@ $(window).resize(function(){
 
 Template.opener.rendered = function(){
   var $opener = this.$("#opener");
-  (resizeCB = _.debounce(function(){
+
+  resizeCB = function(){
     var h = $(window).height() - $opener.offset().top;
+    $opener.css("opacity", 1);
     $opener.css("height", h);
     $opener.find("video").css("height", h);
-  }, 200))();
+  };
+  resizeCB();
+
+  resizeCB = _.debounce(resizeCB,200);
 };

@@ -2,12 +2,18 @@
 
 AppController = RouteController.extend({
   layoutTemplate: "appLayout",
+  onAfterAction: function(){
+    window.scrollTo(0,0);
+  },
   action: function(){
     throw new Error("action: override me!");
   }
 });
 
 HomeController = AppController.extend({
+  subscriptions: function(){
+    this.subscribe("meetups");
+  },
   data: function(){
     return {
       featuredMeetups: Meetups.find({featured: true}),

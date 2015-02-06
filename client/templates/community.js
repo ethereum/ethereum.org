@@ -1,8 +1,22 @@
-var resizeCB = function(){};
+//redefined later
+var resizeCb = function(){}, 
+    loadDataCb = function(){};
 
 $(window).resize(function(){
-  resizeCB();
+  resizeCb();
 });
+
+Meteor.startup(function(){
+  Meetups.find().observeChanges({
+    added: function(){
+      loadDataCb();
+    },
+    changed:function(){
+      loadDataCb();
+    }
+  });
+});
+
 
 Template.community.rendered = function(){
   var centered;
@@ -31,11 +45,7 @@ Template.community.rendered = function(){
 
   var g = svg.append("g");
 
-
-
-  // load and display the world
-  d3.json("/world.json", function(error, topology) {
-
+  function loadData(topology){
     g.selectAll("path")
       .data(topojson.feature(topology, topology.objects.countries).features)
       .enter()
@@ -61,6 +71,12 @@ Template.community.rendered = function(){
           .attr({'class': 'meetup-tooltip'})
           .text(function(d) { return d.city; })
       );
+  }
+
+
+  // load and display the world
+  d3.json("/world.json", function(error, topology) {
+    (loadDataCb = _.debounce(_.partial(loadData, topology),50))();
   });
 
   var x = width / 2,
@@ -93,7 +109,7 @@ Template.community.rendered = function(){
       .style("stroke-width", 1.5 / k + "px");
   }
 
-  resizeCB = _.debounce(function () {
+  resizeCb = _.debounce(function () {
     var width = $('#meetupmap').outerWidth(),
         height = $("#meetupmap").outerHeight(),
         projection = d3.geo.mercator()
