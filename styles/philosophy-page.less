@@ -1,44 +1,51 @@
 #philosophy-page{
-	h2{
-		height:40px;
-		width:100%;
-		display:block;
-	}
-	.img-left{
-		span{
-				width:55%;
-				display:inline-block;
-		}
-		h2{
-			text-align:right;
-		}
-		p{
-			img{
-				max-width:45%;
-				float:left;
-				padding-right:5%;
-				padding-bottom:30px;
-				&.simplicity{
-					padding-top:7%;
-					padding-bottom:150px;
-				}
-			}
-		}
-	}
-	.img-right{
-		h2{
-			text-align:left;
+  h2{
+    height:40px;
+    width:100%;
+    display:block;
+    span.current{
+      width: 270px;
+      display: inline-block;
+    }
+    span.prev{
+      text-align: right;
+    }
+    span.next{
+      text-align: left;
+    }
+    span.prev, span.next{
+      font-size: 14px;
+      display:inline-block;
+      width: 120px;
+      opacity: 0.5;
+    }
+    span, a{
+      position: relative;
+      vertical-align: middle;
+    }
+  }
+  .slide-content{
+    h2, p{
+      text-align: center;
+    }
+    .slide-control{
+      padding: 0 10px;
+    }
+  }
+}
 
-		}
-		p{
-			img{
-				max-width:45%;
-				float:right;
-				padding-left:5%;
-			}
-			.universality{
-				padding:0 0 50px 50px;
-			}
-		}
-	}
+.philosophy-background{
+  position: relative;
+  display: block;
+  margin-top: -129px;
+  height: 300px;
+  .background-container{
+    position:absolute;
+    width: 100%;
+    text-align: center;
+  }
+  img{
+    margin: 0 auto;
+    height: 300px;
+  }
 }
