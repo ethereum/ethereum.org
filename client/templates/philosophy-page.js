@@ -42,6 +42,8 @@ Template.philosophyPage.rendered = function(){
 
     $bg.css("height", h);
     $bg.find("img").css("height", h);
+
+    
   };
 
   resizeBgCb();

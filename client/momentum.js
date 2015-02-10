@@ -9,7 +9,7 @@ Momentum.registerPlugin("slide-fade", function(options){
         .insertBefore(next)
         .velocity("fadeIn",{
           duration: duration,
-          delay: duration
+          delay: duration + (options.delay || 0)
         });
     },
     removeElement: function(node, done){
@@ -22,6 +22,7 @@ Momentum.registerPlugin("slide-fade", function(options){
       }, {
         easing: "ease-in-out",
         duration: duration,
+        delay: options.delay || 0,
         complete: function(){
           $node.remove();
           done();
