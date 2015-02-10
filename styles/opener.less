@@ -41,12 +41,13 @@
     right: 15px;
     bottom: 50px;
     width: 200px;
+    .btn-group{
+      margin-bottom: 20px;
+      display: block;
+    }
     .btn{
       margin: 0;
       position: relative;
-      &:not(:last-of-type){
-        margin-bottom: 20px;  
-      }
       .caret{
         position: absolute;
         right: 40px;
@@ -63,6 +64,10 @@
       a{
         padding: 11px 20px;
         text-transform: uppercase;
+      }
+      .yellowpaper:hover{
+        background-color: #fffae6;
+        color: #000;
       }
     }
   }

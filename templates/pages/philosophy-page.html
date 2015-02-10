@@ -76,16 +76,16 @@
 
 <template name="philosophyPage">
   {{#with slide}}
-    <div class="page" id="philosophy-page">
-      <div class="container slide">
+    <div class="page slide" id="philosophy-page">
+      <div class="container">
         <h1>Philosophy</h1>
-        <row>
-          <div class="philosophy-background">
-            {{#momentum plugin="slide-fade"}}
-              {{> UI.dynamic template=background}}
-            {{/momentum}}
-          </div>
-        </row>
+      </div>
+      <div class="philosophy-background">
+        {{#momentum plugin="slide-fade"}}
+          {{> UI.dynamic template=background}}
+        {{/momentum}}
+      </div>
+      <div class="container">
         <div class="row slide-content">
           {{> Template.dynamic template="philosophySlideHeadline"}}
 
