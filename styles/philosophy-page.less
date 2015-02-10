@@ -3,6 +3,17 @@
     height:40px;
     width:100%;
     display:block;
+    height: 30px;
+    position: relative;
+    .slide-controls{
+      position: absolute;
+      width: 100%;
+      margin: 0 auto;
+      transition: all 0.5s;
+      li{
+        display: inline-block;
+      }
+    }
     span.current{
       width: 270px;
       display: inline-block;
@@ -28,8 +39,9 @@
     h2, p{
       text-align: center;
     }
-    .slide-control{
-      padding: 0 10px;
+    p{
+      height: 80px;
+      margin: 0;
     }
   }
 }

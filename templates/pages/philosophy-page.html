@@ -1,40 +1,48 @@
 <template name="philosophySlideHeadline">
   <h2>
-    <a class="slide-control left">
-      <span class="prev">
-        {{prev}}
-      </span>
-      &lsaquo;
-    </a>
-    <span class="current">
-      {{title}}
-    </span>
-    <a class="slide-control right">
-      &rsaquo;
-      <span class="next">
-        {{next}}
-      </span>
-    </a>
+    <ul class="slide-controls">
+      <li>
+        <a class="slide-control left">
+          <span class="prev">
+            {{prev}}
+          </span>
+          &lsaquo;
+        </a>
+      </li>
+      <li>
+        <span class="current">
+          {{title}}
+        </span>
+      </li>
+      <li>
+        <a class="slide-control right">
+          &rsaquo;
+          <span class="next">
+            {{next}}
+          </span>
+        </a>
+      </li>
+    </ul>
   </h2>
 </template>
 
 <template name="philosophyBackground">
-  <div class="background-container {{direction}}">
-    <img src="{{src}}"/>
+  <div class="background-container">
+    <img src="{{src}}" class="bg-img"/>
   </div>
 </template>
 
 <template name="simplicityBackground">
-  {{>philosophyBackground src="/images/Simplicity.jpg" direction=switchTo}}
+  {{>philosophyBackground src="/images/Simplicity.jpg"}}
 </template>
 <template name="universalityBackground">
-  {{>philosophyBackground src="/images/Universality.jpg" direction=switchTo}}
+  {{>philosophyBackground src="/images/Universality.jpg"}}
 </template>
 <template name="modularityBackground">
-  {{>philosophyBackground src="/images/Modularity.jpg" direction=switchTo}}
+  {{>philosophyBackground src="/images/Modularity.jpg"}}
 </template>
 <template name="nonDiscriminationBackground">
-  {{>philosophyBackground src="/images/Non-Discrimination.jpg" direction=switchTo}}
+  {{>philosophyBackground src="/images/Non-Discrimination.jpg"}}
 </template>
 
 <template name="simplicityContent">
@@ -48,7 +56,7 @@
 
 <template name="universalityContent">
   <p>
-    Ethereum does not have "features". Instead, Ethereum provides scripting languages which you can use to construct any program you can think on top of a distributed P2P network. This has implications going far beyond finance and smart contracts. Imagine what sort of problems could be solved if software was executed in P2P network, was always auditable, and always trustable. This opens the door to the development of voting machines, health care systems, traffic navigation, land registry etc. where users stay in control of their funds and personal information at all times, as part of a network that's both censorship and collusion-proof.
+    Ethereum does not have "features". Instead, Ethereum provides scripting languages which you can use to construct any program you can think on top of a distributed P2P network. This has implications going far beyond finance and smart contracts. Imagine what sort of problems could be solved if software was executed in a P2P network, was always auditable, and always trustable. This opens the door to the development of voting machines, health care systems, traffic navigation, land registry etc. where users stay in control of their funds and personal information at all times, as part of a network that's both censorship and collusion-proof.
   </p>
 </template>
 <template name="modularityContent">
@@ -69,20 +77,20 @@
 <template name="philosophyPage">
   {{#with slide}}
     <div class="page" id="philosophy-page">
-      <div class="container">
+      <div class="container slide">
         <h1>Philosophy</h1>
         <row>
-          <span class="philosophy-background">
+          <div class="philosophy-background">
             {{#momentum plugin="slide-fade"}}
-              {{> UI.dynamic template=background data=this}}
+              {{> UI.dynamic template=background}}
             {{/momentum}}
-          </span>
+          </div>
         </row>
         <div class="row slide-content">
-          {{> UI.dynamic template="philosophySlideHeadline" data=this }}
+          {{> Template.dynamic template="philosophySlideHeadline"}}
 
           {{#momentum plugin="slide-fade"}}
-            {{> UI.dynamic template=content data=this}}
+            {{> UI.dynamic template=content}}
           {{/momentum}}
         </div>
       </div>

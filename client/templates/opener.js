@@ -5,13 +5,14 @@ $(window).resize(function(){
 });
 
 Template.opener.rendered = function(){
-  var $opener = this.$("#opener");
+  var $opener = this.$("#opener"),
+      $video = $opener.find("video");
 
   resizeCB = function(){
     var h = $(window).height() - $opener.offset().top;
     $opener.css("opacity", 1);
     $opener.css("height", h);
-    $opener.find("video").css("height", h);
+    $video.css("height", h);
   };
   resizeCB();
 

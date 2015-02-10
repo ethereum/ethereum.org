@@ -14,7 +14,7 @@ Momentum.registerPlugin("slide-fade", function(options){
     },
     removeElement: function(node, done){
       var $node = $(node),
-          d = ($node.is(".prev")) ? -1 : 1;
+          d = ($(".slide").data("slide-direction") =="prev") ? -1 : 1;
 
       $node.velocity({
         translateX: $node.offset().left + $node.outerWidth() * d,

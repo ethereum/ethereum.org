@@ -27,11 +27,6 @@
     z-index: 101;
   }
   
-  .learn-more{
-    margin-bottom:10px !important;
-    color:white !important;
-
-  }
   .left-container{
     position: absolute;
     left: -15px;
@@ -48,11 +43,26 @@
     width: 200px;
     .btn{
       margin: 0;
+      position: relative;
       &:not(:last-of-type){
         margin-bottom: 20px;  
       }
+      .caret{
+        position: absolute;
+        right: 40px;
+        top: 19px;
+      }
+    }
+    .dropdown-menu{
+      width: 100%;
+      border-radius: 0;
+      border: 1px solid @infusion-color;
+      margin: 0;
+      color: @infusion-color;
+      text-align: center;
     }
   }
+  
 
   h1.page-header{
     font-size: 140px;
