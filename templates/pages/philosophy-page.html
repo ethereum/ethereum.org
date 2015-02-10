@@ -80,18 +80,20 @@
       <div class="container">
         <h1>Philosophy</h1>
       </div>
-      <div class="philosophy-background">
+      <div class="philosophy-background non-breaking">
         {{#momentum plugin="slide-fade"}}
           {{> UI.dynamic template=background}}
         {{/momentum}}
       </div>
       <div class="container">
         <div class="row slide-content">
+          <div class="col-xs-12">
           {{> Template.dynamic template="philosophySlideHeadline"}}
 
           {{#momentum plugin="slide-fade" delay=100}}
             {{> UI.dynamic template=content}}
           {{/momentum}}
+          </div>
         </div>
       </div>
     </div>

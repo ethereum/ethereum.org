@@ -3,7 +3,7 @@
     <a name="community"></a>
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-xs-12">
           <h2>Community</h2>
           <p>Ethereum has a vibrant worldwide community. We are lucky to have meetups in over 50 cities around the world organized by community members like you. If you don't see a meetup near you, <a href="https://forum.ethereum.org/discussion/171/how-to-start-an-ethereum-meetup-faq" target="_blank">start one</a>!</p>
         </div>
@@ -11,21 +11,21 @@
       {{> previousMeetups }}
       
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-xs-4">
           <div class="container-fluid meetup-list">
             <div class="row">
               {{#each featuredMeetups}}
-                <div class="col-md-6">
+                <div class="col-xs-6">
                   <a href="{{url}}" class="meetup">{{city}}</a>
                 </div>
               {{/each}}
-              <div class="col-md-6">
+              <div class="col-xs-6">
                 <a href="https://forum.ethereum.org/discussion/797/list-of-ethereum-specific-meetups-live-updates" target="_blank" class="morelinks">{{unfeaturedMeetupCount}} more...</a>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-8">
+        <div class="col-xs-8">
           <div class="meetupmap-container">
             <div id="meetupmap"></div>
           </div>
