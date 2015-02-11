@@ -64,7 +64,7 @@ npm-bcrypt@0.7.7
 observe-sequence@1.0.4
 ordered-dict@1.0.2
 peerlibrary:async@0.9.2_1
-percolate:momentum@0.7.2
+percolate:momentum@0.7.1
 percolate:velocityjs@1.1.0
 raix:handlebar-helpers@0.2.4
 random@1.0.2
