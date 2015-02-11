@@ -1,37 +1,12 @@
 @import "lib/colors";
 
 #team-profiles{
-  text-align: justify;
-  -moz-text-align-last: justify;
-  text-align-last: justify;
-  &:after{
-    content: "";
-    display:inline-block;
-    width: 100%;
-  }
-  li{
+  profile{
     margin-bottom: 30px;
-    width: 200px;
-    display:inline-block;
-    img{
-      width: 200px;
-      height: 200px;
-      margin-bottom: 15px;
-    }
   }
-  p{
-    display:inline-block;
-    width: 180px;
-    text-align:left;
-    margin: 0;
-    &.name{
-      font-size: 18px;
-      color: @dark-color;
-      margin-bottom: 10px;
-    }
-    &.title{
-      font-size: 14px;
-      color: @light-color;
-    }
+  .name{
+    font-size: 18px;
+    color: @infusion-color;
+    margin-bottom: 50px;
   }
 }

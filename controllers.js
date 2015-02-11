@@ -13,11 +13,13 @@ AppController = RouteController.extend({
 HomeController = AppController.extend({
   subscriptions: function(){
     this.subscribe("meetups");
+    this.subscribe("youtubeVideos");
   },
   data: function(){
     return {
       featuredMeetups: Meetups.find({featured: true}),
-      meetups: Meetups.find()
+      meetups: Meetups.find(),
+      youtubeVideos: YoutubeVideos.find({},{limit:4, sort: {pubDate: -1}})
     };
   },
   action: function(){

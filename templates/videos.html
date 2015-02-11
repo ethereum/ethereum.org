@@ -1,0 +1,28 @@
+<template name="video">
+  <div class="col-xs-3">
+    <a href="{{url}}" class="thumbnail video" data-id="{{_id}}">
+      <img src="{{thumbnails.medium.url}}"/>
+      <h4>
+        <a class="title" href="{{url}}">{{description}}</a>
+      </h4>
+    </a>
+  </div>
+</template>
+
+<template name="videos">
+  <section id="videos">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Latest videos</h2>
+        </div>
+      </div>
+      <div class="row">
+        {{#each youtubeVideos}}
+          {{> video }}
+        {{/each}}
+      </div>
+    </div>
+  </section>
+</template>
