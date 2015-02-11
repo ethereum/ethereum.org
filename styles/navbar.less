@@ -8,36 +8,40 @@
   /*this looks terrible on safari*/
   /*font-family: 'Roboto-Thin', sans-serif;*/
   font-size: 13px;
-  height:60px;
   z-index: 1000;
+  .navbar-inner{
+    padding: 5px 0;
+  }
   a {
-    padding: 20px 10px;
+    padding: 15px 0 15px 20px;
     color: #fff;
 
     &:hover, &.active, &:focus{
       color: @infusion-light-color;
       background-color: transparent;
     }
-    &.ethereum{
-      font-size:14pt;
-      padding:15px 0 0 0;
-    }
   }
-  .navbar-header {
-    width:180px;
-    a{
-     float:left;
-    }
-  }
-
-
   .navbar-brand{
     padding: 0;
     img{
-      height: 60px;
-      padding: 15px 0;
-      line-height: 60px;
+      height: 50px;
+      padding: 10px 0;
     }
   }
-
+  .navbar-toggle, .navbar-toggle.active, .navbar-toggle:focus{
+    border-color: @border-light;
+    border-radius: 0;
+    margin-right: 0;
+    .icon-bar{
+      border-radius: 0;
+      background-color: @light-color;
+    }
+    background-color: transparent;
+    &:hover{
+      background-color: transparent;
+      .icon-bar{
+        background-color: #fff;
+      }
+    }
+  }
 }
