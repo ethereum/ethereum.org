@@ -9,27 +9,36 @@
                 <img src="/images/ethereum-icon-inverted_XX.svg"/>
               </a>
             </div>
-            <ul class="nav navbar-nav navbar-right">
-              <li>
-                <a class="{{isActiveRoute regex='home'}}" href="{{pathFor "home"}}">Home</a>
-              </li>
-              <li>
-                <a class="{{isActiveRoute regex='philosophy'}}" href="{{pathFor "philosophy"}}">Philosophy</a>
-              </li>
-              <li>
-                <a class="{{isActiveRoute regex='technology'}}" href="{{pathFor "technology"}}">Technology</a>
-              </li>
-              <li>
-                <a class="{{isActiveRoute regex='news'}}" href="{{pathFor "news"}}">News</a>
-              </li>
-              <li>
-                <a class="{{isActiveRoute regex='team'}}" href="{{pathFor "team"}}">People</a>
+            <div class="collapse navbar-collapse" id="nav-collapsable">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapsable">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <a class="{{isActiveRoute regex='home'}}" href="{{pathFor "home"}}">Home</a>
+                </li>
+                <li>
+                  <a class="{{isActiveRoute regex='philosophy'}}" href="{{pathFor "philosophy"}}">Philosophy</a>
+                </li>
+                <li>
+                  <a class="{{isActiveRoute regex='technology'}}" href="{{pathFor "technology"}}">Technology</a>
+                </li>
+                <li>
+                  <a class="{{isActiveRoute regex='news'}}" href="{{pathFor "news"}}">News</a>
+                </li>
+                <li>
+                  <a class="{{isActiveRoute regex='team'}}" href="{{pathFor "team"}}">People</a>
 
-              </li>
-              {{#if isAdmin }}
-                <li><a href="/admin">Admin</a></li>
-              {{/if}}
-            </ul>
+                </li>
+                {{#if isAdmin }}
+                  <li><a href="/admin">Admin</a></li>
+                {{/if}}
+              </ul>
+            </div>
+            
           </div>
         </div>
       </div>

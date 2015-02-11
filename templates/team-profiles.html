@@ -1,54 +1,52 @@
-<template name="teamProfile">
-  <div class="col-xs-3 col-lg-2 col-sm-4 team-profile">
-    <img src="{{src}}" class="profile-photo"/>
-    <p class="name">
-      {{name}}
-    </p>
-  </div>
-</template>
-
 <template name="teamProfiles">
-  {{> Template.dynamic template="teamProfile" name="Vitalik Buterin" src="/profiles/Vitalik.jpg" }}
-  <div class="col-xs-3 col-lg-2 col-sm-4 team-profile">
-    <img src="/profiles/GAV.jpg" class="profile-photo"/>
-    <p class="name">
-      Dr. Gavin Wood
-    </p>
-  </div>
-  <div class="col-xs-3 col-lg-2 col-sm-4 team-profile">
-    <img src="/profiles/Jeffrey.jpg" class="profile-photo"/>
-    <p class="name">
-      Jeffrey Wilcke
-    </p>
-  </div>
-  <div class="col-xs-3 col-lg-2 col-sm-4 team-profile">
-    <img src="/profiles/stephan_3.jpg" class="profile-photo"/>
-    <p class="name">
-      Stephan Tual
-    </p>
-  </div>
-  <div class="col-xs-3 col-lg-2 col-sm-4 team-profile">
-    <img src="/profiles/taylor.jpg" class="profile-photo"/>
-    <p class="name">
-      Taylor Gerring
-    </p>
-  </div>
-  <div class="col-xs-3 col-lg-2 col-sm-4 team-profile">
-    <img src="/profiles/JOSEPH-LUBIN_BW.jpg" class="profile-photo"/>
-    <p class="name">
-      Joseph Lubin
-    </p>
-  </div>
-  <div class="col-xs-3 col-lg-2 col-sm-4 team-profile">
-    <img src="/profiles/Anthony-Di-Iorio.jpg" class="profile-photo"/>
-    <p class="name">
-      Anthony Di Iorio
-    </p>
-  </div>
-  <div class="col-xs-3 col-lg-2 col-sm-4 team-profile">
-    <img src="/profiles/Mihai.jpg" class="profile-photo"/>
-    <p class="name">
-      Mihai Alisie
-    </p>
-  </div>
+  <ul id="team-profiles">
+    <li>
+      <img src="/profiles/Vitalik.jpg"/>
+      <p class="name">
+        Vitalik Buterin
+      </p>
+    </li>
+    <li>
+      <img src="/profiles/GAV.jpg"/>
+      <p class="name">
+        Dr. Gavin Wood
+      </p>
+    </li>
+    <li>
+      <img src="/profiles/Jeffrey.jpg"/>
+      <p class="name">
+        Jeffrey Wilcke
+      </p>
+    </li>
+    <li>
+      <img src="/profiles/stephan_3.jpg"/>
+      <p class="name">
+        Stephan Tual
+      </p>
+    </li>
+    <li>
+      <img src="/profiles/taylor.jpg"/>
+      <p class="name">
+        Taylor Gerring
+      </p>
+    </li>
+    <li>
+      <img src="/profiles/JOSEPH-LUBIN_BW.jpg"/>
+      <p class="name">
+        Joseph Lubin
+      </p>
+    </li>
+    <li>
+      <img src="/profiles/Anthony-Di-Iorio.jpg"/>
+      <p class="name">
+        Anthony Di Iorio
+      </p>
+    </li>
+    <li>
+      <img src="/profiles/Mihai.jpg"/>
+      <p class="name">
+        Mihai Alisie
+      </p>
+    </li>
+  </ul>
 </template>
