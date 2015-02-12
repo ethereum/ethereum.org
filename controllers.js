@@ -69,3 +69,9 @@ TeamController = AppController.extend({
   }
 });
 
+ProjectsController = AppController.extend({
+  action: function(){
+    this.render("projects");
+  }  
+});
+
