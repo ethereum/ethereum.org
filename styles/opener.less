@@ -1,6 +1,17 @@
 @import "lib/gradients.less";
 @import "lib/colors.less";
 
+@keyframes bounce-down{
+  0% { opacity: 0; transform: translateY(-20px); }
+  50% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(5px); }
+}
+@-webkit-keyframes bounce-down {
+  0% { opacity: 0; transform: translateY(-20px); }
+  50% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(5px); }
+}
+
 #opener{
   position:relative;
   padding-bottom:0;
@@ -44,6 +55,23 @@
       margin-left: -28px;
     }
   }
+  .center-container{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: 50px;
+    margin-left: -25px;
+    text-align: center;
+  }
+  .scrolldown{
+    span{
+      vertical-align: bottom;
+      font-size: 35px;
+      animation: bounce-down 1.5s infinite;
+      -webkit-animation: bounce-down 1.5s infinite;
+    }
+  }
+
   .right-container{
     position: absolute;
     right: 15px;

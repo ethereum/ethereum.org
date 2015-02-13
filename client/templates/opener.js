@@ -18,3 +18,17 @@ Template.opener.rendered = function(){
 
   resizeCB = _.debounce(resizeCB,200);
 };
+
+Template.opener.events({
+  "click .scrolldown": function(e, tmpl){
+    var $container = $(tmpl.firstNode); 
+    e.preventDefault();
+
+
+    $(tmpl.lastNode).next().velocity("scroll", {
+      duration: 400,
+      easing: "ease-out",
+      offset: -$(".navbar").height()
+    });
+  }
+});
