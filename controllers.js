@@ -15,6 +15,7 @@ HomeController = AppController.extend({
     this.subscribe("meetups");
     this.subscribe("youtubeVideos");
     this.subscribe("feed_entries");
+    this.subscribe("featuredProjects");
   },
   data: function(){
     return {
@@ -22,7 +23,14 @@ HomeController = AppController.extend({
       meetups: Meetups.find(),
       youtubeVideos: YoutubeVideos.find({},{limit:4, sort: {pubDate: -1}}),
       blogFeed: FeedEntries.find({feed_category: "Blog"}, {limit: 3, sort: {pubdate: -1}}),
-      tweets: FeedEntries.find({feed_category: "Twitter"}, {limit: 5, sort: {pubdate: -1}})
+      tweets: FeedEntries.find({feed_category: "Twitter"}, {limit: 5, sort: {pubdate: -1}}),
+      projectGroups: _.reduce(FeaturedProjects.find().fetch(), function(groups, project, i){
+        var groupI = Math.floor(i / 3);
+        
+        (groups[groupI] = groups[groupI] || []).push(project);
+
+        return groups;
+      }, [])
     };
   },
   action: function(){

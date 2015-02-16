@@ -1,0 +1,33 @@
+<template name="projects">
+  <section id="projects">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1></h1>
+          <table>
+            {{#each projectGroups }}
+              <tr>
+                {{#each this}}
+                  <td>
+                    <a href="https://{{link}}">
+                      <div class="thumbnail">
+                        <img src="{{imgUrl}}"/>
+                      </div>
+                      <h4>{{name}}</h4>
+                      <p>
+                        {{description}}
+                      </p>
+                      <p>
+                        {{link}}
+                      </p>
+                    </a>
+                  </td>
+                {{/each}}
+              </tr>
+            {{/each}}
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>

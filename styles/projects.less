@@ -1,0 +1,33 @@
+@import "lib/colors.less";
+
+#projects{
+  .thumbnail{
+    border: 0;
+    height: 130px;
+    img{
+      max-height: 100px;
+    }
+  }
+  table{
+    table-layout: fixed;
+    width: 100%;
+  }
+  tr{
+    &:not(:last-of-type){
+      border-bottom: 1px solid @border-light;
+    }
+    td{
+      padding: 15px;
+      vertical-align: top;
+      &:not(:last-of-type){
+        border-right: 1px solid @border-light;
+      }
+    }
+  }
+
+  h4,p{
+    margin-bottom: 15px;
+    text-align: center;
+    color: @light-color;
+  }
+}

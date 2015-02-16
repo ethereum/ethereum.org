@@ -12,7 +12,8 @@ AdminConfig = {
         {label: "URL", name: "url"},
         {label: "Featured", name: "featured"}
       ]
-    }
+    },
+    FeaturedProjects: {}
   },
   dashboard: {
   }
