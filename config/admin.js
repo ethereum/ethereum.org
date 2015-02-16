@@ -13,7 +13,8 @@ AdminConfig = {
         {label: "Featured", name: "featured"}
       ]
     },
-    FeaturedProjects: {}
+    FeaturedProjects: {},
+    FeaturedIn: {}
   },
   dashboard: {
   }

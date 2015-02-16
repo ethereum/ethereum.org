@@ -199,3 +199,19 @@ section{
   text-align: justify;
   clear:both;
 }
+
+table.sparse-bordered{
+  table-layout: fixed;
+  width: 100%;
+  tr{
+    &:not(:last-of-type){
+      border-bottom: 1px solid @border-light;
+    }
+    td{
+      padding: 15px;
+      &:not(:last-of-type){
+        border-right: 1px solid @border-light;
+      }
+    }
+  }
+}

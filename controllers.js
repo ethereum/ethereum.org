@@ -16,6 +16,7 @@ HomeController = AppController.extend({
     this.subscribe("youtubeVideos");
     this.subscribe("feed_entries");
     this.subscribe("featuredProjects");
+    this.subscribe("featuredIn");
   },
   data: function(){
     return {
@@ -24,13 +25,8 @@ HomeController = AppController.extend({
       youtubeVideos: YoutubeVideos.find({},{limit:4, sort: {pubDate: -1}}),
       blogFeed: FeedEntries.find({feed_category: "Blog"}, {limit: 3, sort: {pubdate: -1}}),
       tweets: FeedEntries.find({feed_category: "Twitter"}, {limit: 5, sort: {pubdate: -1}}),
-      projectGroups: _.reduce(FeaturedProjects.find().fetch(), function(groups, project, i){
-        var groupI = Math.floor(i / 3);
-        
-        (groups[groupI] = groups[groupI] || []).push(project);
-
-        return groups;
-      }, [])
+      projectGroups: groupByRows(FeaturedProjects.find().fetch(), 3),
+      featuredInGroups: groupByRows(FeaturedIn.find().fetch(), 5)
     };
   },
   action: function(){
@@ -71,3 +67,14 @@ ProjectsController = AppController.extend({
   }  
 });
 
+
+
+function groupByRows(items, perRow){
+  return _.reduce(items, function(groups, item, i){
+    var groupI = Math.floor(i / perRow);
+    
+    (groups[groupI] = groups[groupI] || []).push(item);
+
+    return groups;
+  }, []);
+}
