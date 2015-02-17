@@ -1,50 +1,52 @@
-// TeamProfiles = new Meteor.Collection("teamProfiles");
+TeamProfiles = new Meteor.Collection("teamProfiles");
+TeamProfileSortOrder = new Meteor.Collection("teamProfileSortOrder");
 
-// TeamProfiles.attachSchema(new SimpleSchema({
-//   name: {
-//     type: String
-//   },
-//   title: {
-//     type: String
-//   },
-//   photoId: {
-//     type: String,
-//     autoform: {
-//       afFieldInput:{
-//         type: "fileUpload",
-//         collection: "Images"
-//       }
-//     }
-//   },
-//   prev: {
-//     type: String,
-//     optional: true
-//   },
-//   next: {
-//     type: String,
-//     optional: true
-//   }
-// }));
+TeamProfiles.attachSchema(new SimpleSchema({
+  name: {
+    type: String
+  },
+  photoUrl: {
+    type: String
+  },
+  bio: {
+    type: String,
+    autoform: {
+      afFieldInput: {
+        rows: 6
+      }
+    }
+  }
+}));
 
-// TeamProfiles.helpers({
-//   photo: function(){
-//     return Images.findOne(this.photoId);
-//   }
-// });
+TeamProfileSortOrder.attachSchema(new SimpleSchema({
+  order: {
+    type: [new SimpleSchema({
+      id: {
+        type: String,
+        autoform: {
+          options: function(){
+            return _.map(TeamProfiles.find().fetch(), function(profile){
+              return {
+                label: profile.name,
+                value: profile._id
+              };
+            });
+          }
+        }
+      }
+    })]
+  }
+}));
 
-// if(Meteor.isServer){
-//   Meteor.publish("teamProfiles", function(){
-//     return TeamProfiles.find();
-//   });
-
-//   TeamProfiles.allow({
-//     insert: CollectionHelpers.ifAdmin,
-//     update: CollectionHelpers.ifAdmin,
-//     remove: CollectionHelpers.ifAdmin
-//   });
-// }else{
-//   Meteor.subscribe("teamProfiles");
-// }
-
-
+if(Meteor.isServer){
+  Meteor.publish("teamProfiles", function(){
+    return TeamProfiles.find();
+  });
+  Meteor.publish("teamProfileSortOrder", function(){
+    return TeamProfileSortOrder.find();
+  });
+}else{
+  Meteor.subscribe("teamProfiles");
+  Meteor.subscribe("teamProfileSortOrder");
+}
 

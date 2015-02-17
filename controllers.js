@@ -56,8 +56,17 @@ AdminSignInController = AppController.extend({
 });
 
 TeamController = AppController.extend({
+  // team collections are always published (due to yogiben's admin being an utter shit)
   action: function(){
     this.render("teamPage");
+  },
+  data: function(){
+    var profiles = lodash.indexBy(TeamProfiles.find().fetch(), "_id");
+    return {
+      profiles: _.map(TeamProfileSortOrder.findOne().order, function(p){
+        return profiles[p.id];
+      })
+    };
   }
 });
 

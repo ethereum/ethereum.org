@@ -10,12 +10,11 @@ accounts-base
 accounts-password
 twbs:bootstrap
 fortawesome:fontawesome
-jesus666:admin
 aldeed:collection2
 aldeed:autoform
 stevezhu:lodash
 less
-vsivsi:numeral
+numeral:numeral
 http
 danielqiu:feed
 momentjs:moment
@@ -29,4 +28,4 @@ mrt:topojson
 harrison:babyparse
 percolate:momentum
 renaldo:youtube-api
-
+jesus666:admin

@@ -1,70 +1,22 @@
 <template name="teamProfiles">
-  <div class="row" id="team-profiles">
-    <div class="col-xs-3 profile">
-      <div class="thumbnail">
-        <img src="/profiles/Vitalik.jpg"/>
-      </div>
-      <p class="name">
-        Vitalik Buterin
-      </p>
+  <section id="team-profiles">
+    <div class="container">
+      <h1>Who</h1>
+      {{#each profiles}}
+        <div class="row">
+          <div class="col-xs-3">
+            <div class="thumbnail">
+              <img src="{{photoUrl}}"/>
+            </div>
+          </div>
+          <div class="col-xs-7">
+            <h2>{{name}}</h2>
+            <p>
+              {{bio}}
+            </p>
+          </div>
+        </div>
+      {{/each}}
     </div>
-    <div class="col-xs-3 profile">
-      <div class="thumbnail">
-        <img src="/profiles/GAV.jpg"/>
-      </div>
-      <p class="name">
-        Dr. Gavin Wood
-      </p>
-    </div>
-
-    <div class="col-xs-3 profile">
-      <div class="thumbnail">
-        <img src="/profiles/Jeffrey.jpg"/>
-      </div>
-      <p class="name">
-        Jeffrey Wilcke
-      </p>
-    </div>
-
-    <div class="col-xs-3 profile">
-      <div class="thumbnail">
-        <img src="/profiles/stephan_3.jpg"/>
-      </div>
-      <p class="name">
-        Stephan Tual
-      </p>
-    </div>
-    <div class="col-xs-3 profile">
-      <div class="thumbnail">
-        <img src="/profiles/taylor.jpg"/>
-      </div>
-      <p class="name">
-        Taylor Gerring
-      </p>
-    </div>
-    <div class="col-xs-3 profile">
-      <div class="thumbnail">
-        <img src="/profiles/JOSEPH-LUBIN_BW.jpg"/>
-      </div>
-      <p class="name">
-        Joseph Lubin
-      </p>
-    </div>
-    <div class="col-xs-3 profile">
-      <div class="thumbnail">
-        <img src="/profiles/Anthony-Di-Iorio.jpg"/>
-      </div>
-      <p class="name">
-        Anthony Di Iorio
-      </p>
-    </div>
-    <div class="col-xs-3 profile">
-      <div class="thumbnail">
-        <img src="/profiles/Mihai.jpg"/>
-      </div>
-      <p class="name">
-        Mihai Alisie
-      </p>
-    </div>
-  </div>
+  </section>
 </template>
