@@ -2,8 +2,8 @@ Router.route("/",{
   name: "home"
 });
 
-Router.route("/admin/signin",{
-  name: "adminSignIn"
+Router.route("/signin",{
+  name: "signIn"
 });
 
 Router.route("/news",{
@@ -15,7 +15,7 @@ Router.route("/community",{
 });
 
 Router.route("/philosophy",{
-  name: "philosophy",
+  name: "philosophy"
 });
 
 Router.route("/technology",{

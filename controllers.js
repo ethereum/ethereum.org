@@ -46,11 +46,13 @@ PhilosophyController = AppController.extend({
   }
 });
 
-AdminSignInController = AppController.extend({
+SignInController = AppController.extend({
   subsciptions: function(){
+    console.log("sub");
     return Meteor.subscribe("users");
   },
   action: function(){
+    console.log("rend");
     this.render("adminSignInPage");
   }
 });
