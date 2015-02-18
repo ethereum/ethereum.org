@@ -12,7 +12,11 @@ AdminConfig = {
         { label: "Featured", name: "featured" }
       ]
     },
-    FeaturedProjects: {},
+    FeaturedProjects: {
+      tableColumns: [
+        { label: "Name", name: "name" }
+      ]
+    },
     FeaturedIn: {},
     TeamProfiles: {
       tableColumns: [
