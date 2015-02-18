@@ -14,6 +14,9 @@
     border: 1px solid @border-light;
     transition: width 0.7s;
     -webkit-transition: width 0.7s;
+    -moz-transition: width 0.7s;
+    -ms-transition: width 0.7s;
+    -o-transition: width 0.7s;
     width: 50px;
     &:hover{
       background-color: #fff;
@@ -42,10 +45,17 @@
     }
 
     max-height: 50px;
-    transition: max-height 2s;
-    -webkit-transition: max-height 2s;
+    opacity: 0;
+    
+    transition: max-height 2s, opacity 1.2s;
+    -webkit-transition: max-height 2s, opacity 1.2s;
+    -moz-transition: max-height 2s, opacity 1.2s;
+    -ms-transition: max-height 2s, opacity 1.2s;
+    -o-transition: max-height 2s, opacity 1.2s;
+
     &:hover{
       max-height: 500px;
+      opacity: 1;
     }
   }
   .collapse-state{
