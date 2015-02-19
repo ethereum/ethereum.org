@@ -1,48 +1,14 @@
-<template name="philosophySlideHeadline">
-  <h2>
-    <ul class="slide-controls">
-      <li>
-        <a class="slide-control left">
-          <span class="prev">
-            {{prev}}
-          </span>
-          &lsaquo;
-        </a>
-      </li>
-      <li>
-        <span class="current">
-          {{title}}
-        </span>
-      </li>
-      <li>
-        <a class="slide-control right">
-          &rsaquo;
-          <span class="next">
-            {{next}}
-          </span>
-        </a>
-      </li>
-    </ul>
-  </h2>
-</template>
-
-<template name="philosophyBackground">
-  <div class="background-container">
-    <img src="{{src}}" class="bg-img"/>
-  </div>
-</template>
-
 <template name="simplicityBackground">
-  {{>philosophyBackground src="/images/Simplicity.jpg"}}
+  {{>slideBackground src="/images/Simplicity.jpg"}}
 </template>
 <template name="universalityBackground">
-  {{>philosophyBackground src="/images/Universality.jpg"}}
+  {{>slideBackground src="/images/Universality.jpg"}}
 </template>
 <template name="modularityBackground">
-  {{>philosophyBackground src="/images/Modularity.jpg"}}
+  {{>slideBackground src="/images/Modularity.jpg"}}
 </template>
 <template name="nonDiscriminationBackground">
-  {{>philosophyBackground src="/images/Non-Discrimination.jpg"}}
+  {{>slideBackground src="/images/Non-Discrimination.jpg"}}
 </template>
 
 <template name="simplicityContent">
@@ -75,29 +41,12 @@
 </template>
 
 <template name="philosophySlides">
-  {{#with slide}}
-    <section id="philosophy-slides">
-      <div class="container">
-        <h1>Philosophy</h1>
-      </div>
-      <div class="philosophy-background non-breaking">
-        {{#momentum plugin="slide-fade"}}
-          {{> UI.dynamic template=background}}
-        {{/momentum}}
-      </div>
-      <div class="container">
-        <div class="row slide-content">
-          <div class="col-xs-12">
-            {{> Template.dynamic template="philosophySlideHeadline"}}
-
-            <div class="content-container">
-              {{#momentum plugin="slide-fade" delay=100}}
-                {{> UI.dynamic template=content}}
-              {{/momentum}}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  {{/with}}
+  <section id="philosophy-slides">
+    <div class="container">
+      <h1>Philosophy</h1>
+    </div>
+    {{#with slide}}
+      {{> slideLayout }}
+    {{/with}}
+  </section>
 </template>

@@ -15,6 +15,10 @@ FeaturedProjects.attachSchema(new SimpleSchema({
   },
   imgUrl: {
     type: String
+  },
+  largeImage: {
+    type: Boolean,
+    optional: true
   }
 }));
 

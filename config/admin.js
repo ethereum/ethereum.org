@@ -17,7 +17,11 @@ AdminConfig = {
         { label: "Name", name: "name" }
       ]
     },
-    FeaturedIn: {},
+    FeaturedIn: {
+      tableColumns: [
+        { label: "URL", name: "url" }
+      ]
+    },
     TeamProfiles: {
       tableColumns: [
         { label: "Name", name: "name" }

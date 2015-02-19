@@ -9,7 +9,7 @@ Template.opener.rendered = function(){
       $video = $opener.find("video");
 
   resizeCB = function(){
-    var h = $(window).height() - $opener.offset().top;
+    var h = Math.round(($(window).height() - $opener.offset().top) * 2 / 3);
     $opener.css("opacity", 1);
     $opener.css("height", h);
     $video.css("height", h);
