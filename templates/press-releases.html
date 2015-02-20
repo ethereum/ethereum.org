@@ -1,0 +1,13 @@
+<template name="pressReleases">
+  <section id="press-releases">
+    {{#each this}}
+      <h3>{{title}}</h3>
+      <p>
+        {{formatDate publishedAt "MMMM Do YYYY"}}
+      </p>
+      <div class="body">
+        {{#markdown}}{{body}}{{/markdown}}
+      </div>
+    {{/each}}
+  </section>
+</template>

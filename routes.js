@@ -26,4 +26,8 @@ Router.route("/team", {
   name: "team"
 });
 
+Router.route("/press", {
+  name: "press"
+});
+
 

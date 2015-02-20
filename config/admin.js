@@ -27,6 +27,13 @@ AdminConfig = {
         { label: "Name", name: "name" }
       ]
     },
-    TeamProfileSortOrder: {}
+    TeamProfileSortOrder: {},
+    PressReleases: {
+      tableColumns: [
+        { label: "Title", name: "title"},
+        { label: "Date", name: "publishedAt" }
+      ],
+      omitFields: ["publishedAt"]
+    }
   }
 };

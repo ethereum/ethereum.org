@@ -48,11 +48,9 @@ PhilosophyController = AppController.extend({
 
 SignInController = AppController.extend({
   subsciptions: function(){
-    console.log("sub");
     return Meteor.subscribe("users");
   },
   action: function(){
-    console.log("rend");
     this.render("adminSignInPage");
   }
 });
@@ -68,6 +66,29 @@ TeamController = AppController.extend({
       profiles: _.map(TeamProfileSortOrder.findOne().order, function(p){
         return profiles[p.id];
       })
+    };
+  }
+});
+
+PressController = AppController.extend({
+  subscriptions: function(){
+    this.subscribe("feed_entries");
+    this.subscribe("pressReleases");
+  },
+  action: function(){
+    this.render("pressPage");
+  },
+  data: function(){
+    return {
+      blogFeed: FeedEntries.find({feed_category: "Blog"}, {
+        limit: 3,
+        sort: {pubdate: -1},
+        fields: {
+          summary: 0
+        }
+      }),
+      tweets: FeedEntries.find({feed_category: "Twitter"}, {limit: 5, sort: {pubdate: -1}}),
+      press: PressReleases.find({}, {limit: 20, sort: {publishedAt: -1}})
     };
   }
 });
