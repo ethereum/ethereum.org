@@ -1,10 +1,16 @@
 @import "lib/colors.less";
+@import "lib/elements.less";
 
 #floating-nav{
   position: fixed;
   top: 90px;
   width: 100%;
   z-index: 900;
+  
+  .transition();
+  &.shifted{
+    .transform(translate(0,-150px));
+  }
   .nav-container{
     position: absolute;
     overflow: hidden;

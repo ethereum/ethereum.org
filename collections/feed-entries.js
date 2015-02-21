@@ -34,7 +34,7 @@ if(Meteor.isServer){
   Meteor.smartPublish("feed_entries", function(){
     return [
       FeedEntries.find({feed_category: "Blog"}, {limit: 10, sort: {pubdate: -1}}),
-      FeedEntries.find({feed_category: "Twitter"}, {limit: 20, sort: {pubdate: -1}})
+      FeedEntries.find({feed_category: "Twitter"}, {limit: 40, sort: {pubdate: -1}})
     ];
   });
 }

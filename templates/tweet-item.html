@@ -1,0 +1,14 @@
+<template name="tweetItem">
+  <li class="tweet als-item">
+    <div class="tweet-meta">
+      <strong>{{author}}</strong>
+      <a href="{{link}}">@ethereumproject</a>
+      •
+      {{formatDate pubdate "MMM D"}}
+      <img src="/images/ethereum-icon.svg"/>
+    </div>
+    <div class="summary">
+      {{summary}}
+    </div>
+  </li>
+</template>
