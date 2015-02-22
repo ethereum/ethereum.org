@@ -10,16 +10,18 @@
       <div class="row">
         <div class="col-md-12">
           <div class="tweets-container">
-            <ul class="tweets">
-              {{#each tweets}}
-                {{>tweetItem this}}
-              {{/each}}
-            </ul>
-            <ul class="tweets">
-              {{#each tweets}}
-                {{>tweetItem this}}
-              {{/each}}
-            </ul>
+            <div class="scroll">
+              <ul class="tweets">
+                {{#each tweets}}
+                  {{>tweetItem this}}
+                {{/each}}
+              </ul>
+              <ul class="tweets">
+                {{#each tweets}}
+                  {{>tweetItem this}}
+                {{/each}}
+              </ul>
+            </div>
           </div>
         </div>
       </div>

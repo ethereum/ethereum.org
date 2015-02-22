@@ -26,8 +26,6 @@ UI = {
           w = $fChild.outerWidth(),
           duration = 10000 * (w / 250);
 
-      console.log("scroll", w, duration);
-
       $fChild.velocity({
         "margin-left": - w
       }, {

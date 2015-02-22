@@ -1,6 +1,6 @@
 Template.technologySlides.rendered = function(){
-  $('.carousel').carousel({
-    interval: 2000
+  this.$('.carousel').carousel({
+    interval: 5000
   });  
 };
 

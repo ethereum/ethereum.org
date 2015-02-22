@@ -1,118 +1,83 @@
-<template name="tech1Background">
-  {{>slideBackground src="images/tech_1.png"}}
-</template>
-<template name="tech2Background">
-  {{>slideBackground src="images/tech_2.png"}}
-</template>
-<template name="computationBackground">
-  {{>slideBackground src="images/tech_computation.png"}}
-</template>
-<template name="tech3Background">
-  {{>slideBackground src="images/tech_2.png"}}
-</template>
-<template name="tech4Background">
-</template>
-<template name="complexBackground">
-</template>
-<template name="browserBackground">
-</template>
-<template name="tech5Background">
-</template>
-
-<template name="tech1Content">
-</template>
-<template name="tech2Content">
-</template>
-<template name="computationContent">
-</template>
-<template name="tech3Content">
-</template>
-<template name="tech4Content">
-</template>
-<template name="complexContent">
-</template>
-<template name="browserContent">
-</template>
-<template name="tech5Content">
-</template>
-
 <template name="technologySlides">
-  <section id="technology-slides">
+  <section id="technology-slides" class="section-flow red">
     <div class="container"> 
       <h1>Technology</h1>
-      <div id="myCarousel" class="carousel slide">
+      <div id="tech-carousel" class="carousel slide">
         <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-          <li data-target="#myCarousel" data-slide-to="3"></li>
+          <li data-target="#tech-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#tech-carousel" data-slide-to="1"></li>
+          <li data-target="#tech-carousel" data-slide-to="2"></li>
+          <li data-target="#tech-carousel" data-slide-to="3"></li>
+          <li data-target="#tech-carousel" data-slide-to="4"></li>
+          <li data-target="#tech-carousel" data-slide-to="5"></li>
+          <li data-target="#tech-carousel" data-slide-to="6"></li>
+          <li data-target="#tech-carousel" data-slide-to="7"></li>
         </ol>
         <!-- Carousel items -->
         <div class="carousel-inner">
           <div class="active item">
-            <P >
+            <div class="slide-illustration">
+              <img src="/images/tech_1.png"/>
+            </div>
+            <p>
               Ethereum is a platform that makes it possible for any developer to build and publish next-generation distributed applications.
-            </P>
-            <P>
-              <img src="/images/tech_1.png" class="tech_1"/>
-            </P>
+            </p>
           </div>
           <div class="item">
-            <P >
-              <img src="/images/tech_2.png" class="tech_2"/>
-            </P>
-            <P>
+            <div class="slide-illustration">
+              <img src="/images/tech_2.png"/>
+            </div>
+            <p>
               Ether, Ethereum's cryptofuel, powers the applications on the decentralized network.
-            </P>
+            </p>
           </div>
           <div class="item">
-            <P>A small amount of ether is required in order to send any transaction, and the more computation a transaction requires the more ether it consumes.</P>
-            <P>
-              <img src="/images/tech_computation.png" class="tech_comp">
-            </P>
+            <div class="slide-illustration">
+              <img src="/images/tech_computation.png">
+            </div>
+            <p>A small amount of ether is required in order to send any transaction, and the more computation a transaction requires the more ether it consumes.</p>
           </div>
           <div class="item">
-            <P>
+            <div class="slide-illustration">
+              <img src="/images/tech_3.png"/>
+            </div>
+            <p>
               Contracts are the main building blocks of Ethereum.
-            </P>
-            <P>
-              <img src="/images/tech_3.png" class="tech_3"/>
-            </P>
+            </p>
           </div>
           <div class="item">
-            <P >
-              <img src="/images/tech_4.png" class="tech_4"/>
-            </P>
-            <P>
+            <div class="slide-illustration">
+              <img src="/images/tech_4.png"/>
+            </div>
+            <p>
               Sending a transaction to a contract causes its code to execute. Contracts can store data, send transactions and interact with other contracts.
-            </P>
+            </p>
           </div>
           <div class="item">
-            <P>Contracts can be used to build currencies, financial derivatives, voting systems, decentralized organizations, data feeds, title registries and thousands of other applications.</P>
-            <P>
-              <img src="/images/tech_complex.png" class="tech_plex">
-            </P>
+            <div class="slide-illustration">
+              <img src="/images/tech_complex.png">
+            </div>
+            <p>
+              Contracts can be used to build currencies, financial derivatives, voting systems, decentralized organizations, data feeds, title registries and thousands of other applications.
+            </p>
           </div>
           <div class="item">
-            <P>
+            <div class="slide-illustration">
               <img src="/images/tech_browser.png" class="tech_browser">
-            </P>
-            <P>
+            </div>
+            <p>
               Mist, the Ethereum client, is your window to the decentralized world. Decentralized applications built for Ethereum can be used inside of Mist, and look and feel just like any other web application would.
-            </P>
+            </p>
           </div>
           <div class="item">
-            <P>
-              Ethereum can be used to codify, decentralize, secure and trade almost anything.
-            </P>
-            <P>
+            <div class="slide-illustration">
               <img src="/images/tech_5.png" class="tech_5">
-            </P>
+            </div>
+            <p>
+              Ethereum can be used to codify, decentralize, secure and trade almost anything.
+            </p>
           </div>
         </div>
-        <!-- Carousel nav -->
-        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
       </div>
       <div class="row sdcarousel"></div>
     </div>

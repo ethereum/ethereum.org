@@ -130,6 +130,9 @@ body{
   }
 }
 section{
+  .container.main{
+    margin-bottom: 20px;
+  }
   &.section-flow{
     margin: 0;
     padding: 40px 20px 20px;
@@ -163,7 +166,10 @@ section{
     border-top-color: @bg-dark-blue;
   }
   &.red:after{
-    border-top-color: #eb453e;
+    border-top-color: @bg-red;
+  }
+  &.blue:after{
+    border-top-color: @bg-blue;
   }
 }
 .popover{
