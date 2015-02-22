@@ -24,7 +24,8 @@ HomeController = AppController.extend({
       meetups: Meetups.find(),
       youtubeVideos: YoutubeVideos.find({},{limit:6, sort: {pubDate: -1}}),
       blogFeed: FeedEntries.find({feed_category: "Blog"}, {limit: 3, sort: {pubdate: -1}}),
-      tweets: FeedEntries.find({feed_category: "Twitter"}, {limit: 20, sort: {pubdate: -1}}),
+      tweets: FeedEntries.find({feed_category: "Twitter"}, {limit: 15, sort: {pubdate: -1}}),
+      tweetsShort: FeedEntries.find({feed_category: "Twitter"}, {limit: 5, sort: {pubdate: -1}}),
       projectGroups: groupByRows(FeaturedProjects.find().fetch(), 3),
       featuredInGroups: groupByRows(FeaturedIn.find().fetch(), 5),
       augmentingNav: true

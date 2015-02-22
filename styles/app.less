@@ -15,9 +15,7 @@ body{
   }
 
   a {
-    color: #fff;
     &:hover {
-      color: #ccc;
       text-decoration: none;
       cursor: pointer;
     }
@@ -56,10 +54,6 @@ body{
   h1, h2, p{
     margin-bottom: 20px;
   }
-  h1, h2, h3, h4, p{
-    color: #fff;
-  }
-  color: #fff;
   .btn {
     text-transform: uppercase;
   }
@@ -83,6 +77,7 @@ body{
   .img-col{
     padding: 0;
   }
+  color: #fff;
 }
 
 #ethereum-org, .ethereum-modal{
@@ -124,6 +119,7 @@ body{
     text-shadow: none;
     font-size: 24px;
   }
+  
 }
 section{
   .subsection-text{
@@ -142,6 +138,59 @@ section{
   }
   &.blue{
     background-color: @bg-blue;
+  }
+  &.light-grey{
+    background-color: @bg-light-grey;
+  }
+  &.dark-grey{
+    background-color: @bg-dark-grey;
+  }
+  &.purple{
+    background-color: @bg-purple;
+  }
+}
+#ethereum-org{
+  section.section-flow{
+    &.light-grey{
+      color: #333;
+      h1, h2, p{
+        color: #333;
+      }
+      a{
+        color: @text-blue;
+        &:hover{
+          color: @text-purple;
+        } 
+      }
+      
+    }
+    &.dark-blue, &.blue, &.red, &.dark-grey{
+      color: #fff;
+      h1, h2, p{
+        color: #fff;
+      }
+      a{
+        color: #ccc;
+        &:hover{
+          color: @text-purple;
+        } 
+      }
+    }
+    &.purple{
+      color: #fff;
+      h1, h2, p{
+        color: #fff;
+      }
+      a{
+        color: #000;
+        &:hover{
+          color: @text-blue;
+        } 
+      }
+      strong{
+        color: #000;
+      }
+    }
   }
 }
 &.point-down{
@@ -168,6 +217,16 @@ section{
   &.blue:after{
     border-top-color: @bg-blue;
   }
+  &.light-grey:after{
+    border-top-color: @bg-light-grey;
+  }
+  &.dark-grey:after{
+    border-top-color: @bg-dark-grey;
+  }
+  &.purple:after{
+    border-top-color: @bg-purple;
+  }
+
 }
 .popover{
   border-radius:0;
