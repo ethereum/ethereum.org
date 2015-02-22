@@ -1,9 +1,15 @@
 @import "lib/colors.less";
 
 #projects{
+  h1{
+    text-align: center;
+    margin: 60px 0 80px;
+  }
   .thumbnail{
     border: 0;
     height: 130px;
+    background-color: transparent;
+    margin-bottom: 0;
     img{
       max-height: 100px;
       &.smaller{
@@ -13,10 +19,13 @@
     }
   }
 
+  p{
+    font-size: 12px;
+  }
+
   h4,p{
     margin-bottom: 15px;
     text-align: center;
-    color: @light-color;
   }
 
   table td{

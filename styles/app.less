@@ -198,6 +198,36 @@ section{
       }
     }
   }
+
+  section.section-flow.dark-blue{
+    table.multicolored{
+      tr:nth-child(odd){
+        td:nth-child(3n+1){
+          background-color: @bg-light-grey;
+          p{
+            color: #333;
+          }
+        }
+        td:nth-child(3n+2){
+          background-color: @bg-red;
+        }
+        td:nth-child(3n+3){
+          background-color: @bg-dark-grey;
+        }
+      }
+      tr:nth-child(even){
+        td:nth-child(3n+1){
+          background-color: @bg-dark-blue;
+        }
+        td:nth-child(3n+2){
+          background-color: @bg-blue;
+        }
+        td:nth-child(3n+3){
+          background-color: @bg-purple;
+        }
+      }
+    }
+  }
 }
 &.point-down{
   position: relative;
@@ -251,6 +281,13 @@ section{
   }
 }
 
+table.multicolored{
+  table-layout: fixed;
+  width: 100%;
+  td{
+    padding: 15px;
+  }
+}
 
 table.sparse-bordered{
   table-layout: fixed;

@@ -1,10 +1,13 @@
 <template name="projects">
-  <section id="projects">
+  <section id="projects" class="section-flow dark-blue">
     <div class="container">
       <h1>Projects using Ethereum</h1>
       <div class="row">
         <div class="col-md-12">
-          <table class="sparse-bordered">
+          <section >
+          </section>
+
+          <table class="multicolored">
             {{#each projectGroups }}
               <tr>
                 {{#each this}}
@@ -13,7 +16,6 @@
                       <div class="thumbnail">
                         <img class="{{#if largeImage}}smaller{{/if}}" src="{{imgUrl}}"/>
                       </div>
-                      <h4>{{name}}</h4>
                       <p>
                         {{description}}
                       </p>
