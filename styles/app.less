@@ -148,6 +148,9 @@ section{
   &.purple{
     background-color: @bg-purple;
   }
+  .pointer{
+    margin-top: -1px;
+  }
 }
 #ethereum-org{
   section.section-flow{
@@ -171,9 +174,12 @@ section{
       }
       a{
         color: #ccc;
+        &.no-highlight{
+          color: #fff;
+        }
         &:hover{
           color: @text-purple;
-        } 
+        }
       }
     }
     &.purple{

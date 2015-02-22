@@ -1,0 +1,24 @@
+<template name="meetups">
+  <section id="meetups" class="section-flow red">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-4 subsection-text">
+          <h1>Meetups</h1>
+          <div class="row">
+            {{#each featuredMeetups}}
+              <div class="col-xs-6">
+                <a href="{{url}}" class="meetup no-highlight">{{city}}</a>
+              </div>
+            {{/each}}
+            <div class="col-xs-6">
+              <a href="https://forum.ethereum.org/discussion/797/list-of-ethereum-specific-meetups-live-updates" target="_blank" class="no-highlight">{{unfeaturedMeetupCount}} more...</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-8">
+          <div id="meetupmap"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
