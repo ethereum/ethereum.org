@@ -92,12 +92,13 @@ body{
   }
   .modal-header{
     border:0;
-    background-color: #000;
+    background-color: @bg-blue;
     color: #fff;
     font-family: Roboto-Thin;
     font-size:18px;
   }
   .modal-body{
+    background-color: @bg-blue;
     p{
       margin: 0 0 10px 0;
       &:first-of-type{
@@ -199,5 +200,15 @@ table.sparse-bordered{
         border-right: 1px solid @border-light;
       }
     }
+  }
+}
+
+#YouTubeModalDialog{
+  width: 640px !important;
+  iframe{
+    margin: 0 !important;
+  }
+  .modal-body{
+    padding-bottom: 12px !important;
   }
 }
