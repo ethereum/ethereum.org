@@ -1,16 +1,20 @@
 #previous-meetups{
-  padding-bottom:50px; 
+  padding-bottom:50px;
+  .img-col{
+    padding: 0;
+  }
 
   .thumbnail{
     border: 0;
     padding: 0;
     position: relative;
+    margin:0;
     span{
       z-index:100;
       position:absolute;
       top:50%;
       margin-top: -15px;
-      width:97%;
+      width:100%;
       display:block;
       text-align:center;
       background:black;
@@ -21,9 +25,7 @@
       pointer-events: none;
     }
     img{
-      width:115%;
       z-index:50;
-      border:1px solid #fafafa;
     }
     &:hover span{
       opacity:100;
