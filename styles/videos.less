@@ -1,0 +1,28 @@
+#videos{
+  padding: 0;
+  .thumbnail{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    position: relative;
+    img{
+      margin: 0;
+      padding: 0;
+    }
+    .title{
+      display: none;
+      color: #fff;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      padding: 10px 10px;
+      background-color: rgba(0,0,0,0.6);
+    }
+    &:hover{
+      .title{
+        display: block;
+      }
+    }
+  }
+}

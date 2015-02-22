@@ -11,7 +11,7 @@ Meteor.startup(function(){
       YoutubeApi.search.list({
         part: "id,snippet",
         order: "date",
-        maxResults: 5,
+        maxResults: 6,
         channelId: Meteor.settings.YOUTUBE_ETHEREUM_CHANNEL_ID
       }, function(err, data){
         var Fiber = Npm.require("fibers");

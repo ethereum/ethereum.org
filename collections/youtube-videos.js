@@ -19,6 +19,6 @@ YoutubeVideos.attachSchema(new SimpleSchema({
 
 if(Meteor.isServer){
   Meteor.publish("youtubeVideos", function(){
-    return YoutubeVideos.find({}, {limit: 5});
+    return YoutubeVideos.find({}, {limit: 10});
   });
 }

@@ -1,27 +1,29 @@
 <template name="video">
-  <div class="col-xs-3">
-    <a href="{{url}}" class="thumbnail video" data-id="{{_id}}">
+  <div class="col-xs-4 img-col">
+    <a href="{{url}}" class="thumbnail" data-id="{{_id}}">
       <img src="{{thumbnails.medium.url}}"/>
-      <h4>
-        <span class="title">{{description}}</span>
-      </h4>
+      <span class="title">{{description}}</span>
     </a>
   </div>
 </template>
 
 <template name="videos">
-  <section id="videos">
-
+  <section id="videos" class="section-flow dark-blue">
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-xs-4 subsection-text">
           <h1>Latest videos</h1>
+          <p>
+            Check out more of our videos on the <a href="https://youtube.com/user/ethereumproject">official Ethereum YouTube channel</a>
+          </p>
         </div>
-      </div>
-      <div class="row">
-        {{#each youtubeVideos}}
-          {{> video }}
-        {{/each}}
+        <div class="col-xs-8">
+          <div class="row-fluid">
+            {{#each youtubeVideos}}
+              {{> video }}
+            {{/each}}
+          </div>
+        </div>
       </div>
     </div>
   </section>
