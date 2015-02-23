@@ -36,18 +36,6 @@ HomeController = AppController.extend({
   }
 });
 
-TechnologyController = AppController.extend({
-  action: function(){
-    this.render("technologyPage");
-  }
-});
-
-PhilosophyController = AppController.extend({
-  action: function(){
-    this.render("philosophyPage");
-  }
-});
-
 SignInController = AppController.extend({
   subsciptions: function(){
     return Meteor.subscribe("users");
@@ -63,9 +51,10 @@ TeamController = AppController.extend({
     this.render("teamPage");
   },
   data: function(){
-    var profiles = lodash.indexBy(TeamProfiles.find().fetch(), "_id");
+    var profiles = lodash.indexBy(TeamProfiles.find().fetch(), "_id"),
+        order = (TeamProfileSortOrder.findOne() || {}).order;
     return {
-      profiles: _.map(TeamProfileSortOrder.findOne().order, function(p, i){
+      profiles: _.map(order, function(p, i){
         return {
           profile:profiles[p.id],
           index: i
@@ -98,12 +87,11 @@ PressController = AppController.extend({
   }
 });
 
-ProjectsController = AppController.extend({
+PartnershipController = AppController.extend({
   action: function(){
-    this.render("projects");
-  }  
+    this.render("partnershipPage");
+  }
 });
-
 
 
 function groupByRows(items, perRow){
