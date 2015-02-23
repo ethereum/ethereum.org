@@ -4,4 +4,33 @@
   h2{
     margin-top: 0;
   }
+  .profile-container{
+    &:not(:first-of-type){
+      padding-top: 80px;
+    }
+    &:nth-child(3n+1){
+      background-color: @bg-light-grey;
+      h2, p{
+        color: #333;
+      }
+    }
+    &:nth-child(3n+2){
+      background-color: @bg-red;
+      h2, p{
+        color: #fff;
+      }
+    }
+    &:nth-child(3n+3){
+      background-color: @bg-dark-grey;
+      h2, p{
+        color: #fff;
+      }
+    }
+  }
+
+  .thumbnail{
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
 }

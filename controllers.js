@@ -65,8 +65,11 @@ TeamController = AppController.extend({
   data: function(){
     var profiles = lodash.indexBy(TeamProfiles.find().fetch(), "_id");
     return {
-      profiles: _.map(TeamProfileSortOrder.findOne().order, function(p){
-        return profiles[p.id];
+      profiles: _.map(TeamProfileSortOrder.findOne().order, function(p, i){
+        return {
+          profile:profiles[p.id],
+          index: i
+        };
       })
     };
   }

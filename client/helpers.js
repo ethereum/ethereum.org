@@ -6,6 +6,9 @@ var helpers = {
   },
   formatDate: function(date, format){
     return moment(date).format(format);
+  },
+  isOdd: function(i){
+    return i%2;
   }
 };
 

@@ -1,22 +1,42 @@
 <template name="teamProfiles">
-  <section id="team-profiles">
+  <div class="section-flow light-grey">
     <div class="container">
       <h1>Who</h1>
-      {{#each profiles}}
-        <div class="row">
-          <div class="col-xs-3">
-            <div class="thumbnail">
-              <img src="{{photoUrl}}"/>
-            </div>
-          </div>
-          <div class="col-xs-7">
-            <h2>{{name}}</h2>
-            <p>
-              {{bio}}
-            </p>
+    </div>
+  </div>
+  <section id="team-profiles" class="section-flow light-grey">
+    {{#each profiles}}
+      <div class="profile-container">
+        <div class="container">
+          <div class="row">
+            {{#if isOdd index }}
+              <div class="col-xs-7">
+                <h2 class="text-right">{{profile.name}}</h2>
+                <p class="text-right">
+                  {{profile.bio}}
+                </p>
+              </div>
+              <div class="col-xs-offset-1 col-xs-3">
+                <div class="thumbnail">
+                  <img src="{{profile.photoUrl}}"/>
+                </div>
+              </div>
+            {{else}}
+              <div class="col-xs-3">
+                <div class="thumbnail">
+                  <img src="{{profile.photoUrl}}"/>
+                </div>
+              </div>
+              <div class="col-xs-offset-1 col-xs-7">
+                <h2>{{profile.name}}</h2>
+                <p>
+                  {{profile.bio}}
+                </p>
+              </div>
+            {{/if}}
           </div>
         </div>
-      {{/each}}
-    </div>
+      </div>
+    {{/each}}
   </section>
 </template>
