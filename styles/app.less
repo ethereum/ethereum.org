@@ -157,47 +157,60 @@ section{
 }
 #ethereum-org{
   section.section-flow{
+    /*copy colors*/
     &.light-grey{
       color: #333;
       h1, h2, p{
         color: #333;
       }
-      a{
-        color: @text-blue;
-        &:hover{
-          color: @text-purple;
-        } 
-      }
-      
     }
-    &.dark-blue, &.blue, &.red, &.dark-grey{
+    
+    &.dark-blue, &.blue, &.dark-grey, &.red{
       color: #fff;
       h1, h2, p{
         color: #fff;
       }
-      a{
-        color: #ccc;
-        &.no-highlight{
-          color: #fff;
-        }
-        &:hover{
-          color: @text-purple;
-        }
-      }
     }
+    
     &.purple{
       color: #fff;
       h1, h2, p{
         color: #fff;
       }
+      strong{
+        color: #000;
+      }
+    }
+    
+    /*link colors*/
+
+    &.dark-blue, &.blue, &.dark-grey{
+      a{
+        color: #ccc;
+        &:hover{
+          color: @text-purple;
+        }
+      }
+    }
+    
+    &.red,&.purple{
       a{
         color: #000;
         &:hover{
           color: @text-blue;
         } 
+        &.no-highlight{
+          color: #fff;
+        }
       }
-      strong{
-        color: #000;
+    }
+
+    &.light-grey{
+      a{
+        color: @text-blue;
+        &:hover{
+          color: @text-purple;
+        } 
       }
     }
   }
