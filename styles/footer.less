@@ -1,24 +1,51 @@
 @import "lib/colors.less";
 
+@footer-height: 260px;
+
 html {
   position: relative;
   min-height: 100%;
-  
 }
-.footer {
+#main-footer{
+  min-width: 980px;
+  background-color: @bg-dark-blue;
+  color: #fff;
   position: absolute;
   bottom: 0;
   width: 100%;
-  min-width: 980px;
-  height: 60px;
-  border-top: 1px solid @border-light;
-}
-.footer-text{
-  color: @normal-color;
-  padding: 20px;
-  margin:0;
+  height: @footer-height;
+  padding-top: 30px;
+
+  .copyright{
+    font-size: 12px;
+    margin: 15px 0; 
+  }
+
+  .link-list-container{
+    float: left;
+    &:not(:last-of-type){
+      margin-right: 25px;
+    }
+    h4{
+      color: @text-light-purple;
+    }
+    a{
+      color: #fff;
+      font-size: 12px;
+    }
+  }
+  .right-section{
+    width: 220px;
+  }
+  .logo{
+    width: 150px;
+  }
 }
 
-
+#ethereum-org{
+  .page{
+    margin-bottom: @footer-height;
+  }
+}
 
 
