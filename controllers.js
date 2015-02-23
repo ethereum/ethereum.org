@@ -93,6 +93,12 @@ PartnershipController = AppController.extend({
   }
 });
 
+MiningController = AppController.extend({
+  action: function(){
+    this.render("miningPage");
+  }
+});
+
 
 function groupByRows(items, perRow){
   return _.reduce(items, function(groups, item, i){

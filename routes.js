@@ -6,14 +6,10 @@ Router.route("/signin",{
   name: "signIn"
 });
 
-Router.route("/team", {
-  name: "team"
-});
+Router.route("/team");
 
-Router.route("/press", {
-  name: "press"
-});
+Router.route("/press");
 
-Router.route("/partnership", {
-  name: "partnership"
-});
+Router.route("/partnership");
+
+Router.route("/mining");
