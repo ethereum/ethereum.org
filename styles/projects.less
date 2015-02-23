@@ -1,11 +1,7 @@
 @import "lib/colors.less";
+@import "lib/media.less";
 
 #projects{
-  padding-bottom: 40px;
-  h1{
-    text-align: center;
-    margin: 80px;
-  }
   .thumbnail{
     border: 0;
     height: 130px;
@@ -22,15 +18,41 @@
 
   p{
     font-size: 12px;
+    text-align: center;
+    &:not(:last-of-type){
+      margin-bottom: 15px;
+    }
   }
 
-  h4,p{
-    margin-bottom: 15px;
-    text-align: center;
+  p{
+    margin-bottom: 0;
   }
 
   table td{
     vertical-align: top;
+  }
+
+  td{
+    height: 316px;
+    padding-top: 70px;
+  }
+
+  @media(min-width: @sm-min){
+    td{
+      height: 210px;
+    }
+  }
+  @media(min-width: @md-min){
+    td{
+      height: 284px;
+      padding-top: 40px;
+    }
+  }
+  @media(min-width: @lg-min){
+    td{
+      height: 350px;
+      padding-top: 80px;
+    }
   }
 }
 

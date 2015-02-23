@@ -1,8 +1,43 @@
+@import "lib/media.less";
+
 #featured-in{
   .thumbnail{
     border: 0;
+    margin: 0;
+    background-color: transparent;
   }
+  
   td{
-    height: 200px;
+    vertical-align: center;
+    height: 190px;
+  }
+
+  img{
+    max-height: 150px;
+  }
+
+  @media(min-width: @sm-min){
+    img{
+      max-height: 100px
+    }
+    td{
+      height: 144px;
+    }
+  }
+  @media(min-width: @md-min){
+    img{
+      max-height: 120px;
+    }
+    td{
+      height: 188px;
+    }
+  }
+  @media(min-width: @lg-min){
+    img{
+      max-height: 150px;
+    }
+    td{
+      height: 228px;
+    }
   }
 }

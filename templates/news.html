@@ -2,12 +2,12 @@
   <section id="news" class="section-flow light-grey">
     <div class="container">
       <div class="row">
-        <div class="col-xs-8 subsection-text">
+        <div class="col-xs-8">
           {{>blogPosts blogFeed}}
         </div>
         <div class="col-xs-4">
-          <section id="news-tweets" class="section-flow purple">
-            <h2>Twitter</h2>
+          <section id="news-tweets" class="section-flow purple subsection">
+            <h1>Twitter</h1>
             {{#each tweetsShort}}
               {{> tweetItem this}}
             {{/each}}

@@ -51,7 +51,7 @@ body{
   h1, h2, h3{
     border:0;
   }
-  h1, h2, p{
+  h2, p{
     margin-bottom: 30px;
   }
   .btn {
@@ -122,13 +122,16 @@ body{
   
 }
 section{
-  .subsection-text{
-    margin-top: 40px;
-    margin-bottom: 20px;
+  h1{
+    padding: 80px 0;
+    margin: 0;
   }
   &.section-flow{
     margin: 0;
-    padding: 0;
+    padding: 0 0;
+    .subsection{
+      padding: 0 20px 80px;
+    }
   }
   &.dark-blue{
     background-color: @bg-dark-blue;
@@ -199,7 +202,7 @@ section{
     }
   }
 
-  section.section-flow.dark-blue{
+  section.section-flow{
     table.multicolored{
       tr:nth-child(odd){
         td:nth-child(3n+1){
@@ -229,8 +232,11 @@ section{
     }
   }
 }
-&.point-down{
+.point-down{
   position: relative;
+  &.section-flow{
+    padding-bottom: 80px;
+  }
   &:after {
     top: 100%;
     left: 50%;
