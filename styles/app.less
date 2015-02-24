@@ -33,13 +33,20 @@ body{
   .btn{
     border-radius: 0;
     border: 0;
+    padding-left: 30px;
+    padding-right: 30px;
   }
-  .btn-small{
-    height:30px;
-    padding:5px 15px !important;
-    margin-top:-3px;
-    font-size:11px;
-    border-radius:3px;
+  .btn-blue{
+    background-color: @bg-blue;
+    color: #fff;
+  }
+  .btn-light-grey{
+    background-color: @bg-light-grey;
+    color: #000;
+  }
+  .btn-lg{
+    font-size: 14px;
+    padding:12px;
   }
   input[type=text],input[type=password]{
     border:1px solid #ddd;
@@ -52,16 +59,18 @@ body{
     font-size: 26px;
   }
   h1, h2, h3{
+    font-family: 'Signika-Regular', sans-serif;
     border:0;
   }
   h2, p{
     margin-bottom: 30px;
   }
-  .btn {
-    text-transform: uppercase;
-  }
   .thumbnail{
     border-radius: 0;
+    &.no-decoration{
+      border: 0;
+      background-color: transparent;
+    }
   }
   ul{
     margin: 0;
@@ -70,10 +79,6 @@ body{
       list-style-type: none;
     }
   } 
-  .btn-lg{
-    font-size: 14px;
-    padding:12px;
-  }
   strong{
     font-family: Roboto-Medium;
   }
@@ -209,20 +214,20 @@ section.section-flow{
     
     /*link colors*/
 
-    &.dark-blue, &.blue, &.dark-grey{
+    &.dark-blue,&.dark-grey{
       a{
-        color: #ccc;
+        color: @text-light-purple;
         &:hover{
-          color: @text-purple;
+          color: @text-red;
         }
       }
     }
     
-    &.red,&.purple{
+    &.red,&.purple,&.blue{
       a{
         color: #000;
         &:hover{
-          color: @text-blue;
+          color: @text-light-grey;
         } 
         &.no-highlight{
           color: #fff;
@@ -273,7 +278,7 @@ section.section-flow{
 .point-down, .subsection.point-from-left, .subsection.point-from-right{
   position: relative;
   &.section-flow{
-    padding-bottom: 80px;
+    padding-bottom: 60px;
   }
   &:after{
     border: solid transparent;

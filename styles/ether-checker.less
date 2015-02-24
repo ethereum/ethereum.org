@@ -1,50 +1,14 @@
 @import "lib/colors";
 
 #ether-checker{
-  background:#efefef url(images/etherbar.png);
-  height:95px;
-  padding-top:10px;
-  margin-top:0;
-  border-top: 1px solid #ccc;
-
-  h4{
-    font-size: 16px;
-  }
-
-  .ether-purchased{
-  	font-size:32px;
-  	span{
-  		font-size:20px;
-  		padding-left:5px;
-  		color:#666;
-  	}
-  }
-
-  .popup-ether{
-    margin-left: 15px;
-    background:white;
-    display:inline-block;
-    border-radius:10px;
-    width:20px;
-    height:20px;
-    text-align:center;
-    cursor:pointer;
-  }
-
-
-  .ether-input{
-  	padding-top:12px;
-  }
-
-  .important{
-    font-size: 32px;
-    line-height: 20px;
-  }
-  .check-balance{
-    input{
-      vertical-align: middle;
+  input{
+    display: block;
+    margin:0;
+    float:left;
+    border: 0;
+    &[type=text]{
+      width: 200px;
+      color: #000;
     }
   }
-
 }
-               

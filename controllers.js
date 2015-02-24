@@ -105,6 +105,12 @@ FoundationController = AppController.extend({
   }
 });
 
+EtherController = AppController.extend({
+  action: function(){
+    this.render("etherPage");
+  }
+});
+
 
 function groupByRows(items, perRow){
   return _.reduce(items, function(groups, item, i){

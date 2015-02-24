@@ -22,13 +22,18 @@ Template.etherChecker.helpers({
 
 Template.etherChecker.events({
   "submit form": function(e,tmpl){
+    e.preventDefault();
+    
+    var addr = tmpl.$("[name=address]").val();
+
+    if(!addr) return;
+
     Session.set("etherChecker_modalText", {
       body: "Calculating..."
     });
     $("#ether-balance-modal").modal();
     
-    var addr = tmpl.$("[name=address]").val(),
-        btcaddr = base58checkEncode(addr, 0),
+    var btcaddr = base58checkEncode(addr, 0),
         getUnspentUrl = blockchainUrl + "/unspent?active=" + btcaddr + "&cors=true&api_code=" +
           blockchainApi;
 

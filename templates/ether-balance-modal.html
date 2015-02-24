@@ -3,24 +3,30 @@
     <div class="modal-dialog">
       <div class="modal-content">
         
-          <div class="modal-header">
-            Your Ether balance
+        <div class="modal-header">
+          Your Ether balance
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xs-9">
+                <p>
+                  {{body}}
+                </p>
+                {{#if bodySecondary }}
+                  <p class="secondary">
+                    {{bodySecondary}}
+                  </p>
+                {{/if}}
+              </div>
+              <div class="col-xs-3">
+                <button class="btn btn-light-grey btn-block" data-dismiss="modal">
+                  Ok
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="modal-body">
-            <p>
-              {{body}}
-            </p>
-            {{#if bodySecondary }}
-              <p class="secondary">
-                {{bodySecondary}}
-              </p>
-            {{/if}}
-          </div>
-        
-        <div class="modal-footer">
-          <button class="btn btn-eth" data-dismiss="modal">
-            Ok
-          </button>
+
         </div>
       </div>
     </div>

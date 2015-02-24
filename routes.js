@@ -15,3 +15,5 @@ Router.route("/partnership");
 Router.route("/mining");
 
 Router.route("/foundation");
+
+Router.route("/ether");

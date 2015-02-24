@@ -1,5 +1,5 @@
 <template name="meetups">
-  <section id="meetups" class="section-flow red">
+  <section id="meetups" class="section-flow blue">
     <div class="container">
       <div class="row">
         <div class="col-xs-4 subsection-text">
@@ -7,7 +7,7 @@
           <div class="row">
             {{#each featuredMeetups}}
               <div class="col-xs-6">
-                <a href="{{url}}" class="meetup no-highlight">{{city}}</a>
+                <a href="{{url}}" class="meetup">{{city}}</a>
               </div>
             {{/each}}
             <div class="col-xs-6">
@@ -22,7 +22,7 @@
     </div>
     <div class="container pointer">
       <div class="row">
-        <div class="col-xs-4 point-down red">
+        <div class="col-xs-4 point-down blue">
         </div>
       </div>
     </div>

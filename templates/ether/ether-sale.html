@@ -1,0 +1,29 @@
+<template name="etherSale">
+  <section id="ether-sale" class="section-flow dark-grey point-down">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-4">
+          <div class="thumbnail no-decoration">
+            <img src="/images/sale-icon.png"/>
+          </div>
+        </div>
+        <div class="col-xs-8">
+          <h1>What is the Ether Sale?</h1>
+          <p>
+            In order to raise funds for development of Ethereum to the release of the genesis block and beyond, the Ethereum foundation conducted a sale of Ether to the public, during which anyone could buy Ether in exchange for Bitcoin at a rate of 1337 to 2000 ETH per BTC, with earlier purchasers getting better rates.
+          </p>
+          <p>
+            The sale lasted 42 days, starting on July 22nd and ending at 23:59 Zug time September 2, and collected a total of 31531 BTC, worth $18,439,086 at the time of the sale, in exchange for about 60102216 ETH.
+          </p>
+          <p>
+            For further statistical information on the Ether sale, please refer Vitalik Buterin’s blogpost: <a href="https://blog.ethereum.org/2014/08/08/ether-sale-a-statistical-overview/">Ether Sale: A Statistical Overview</a>
+          </p>
+          <p>
+            Ether bought in the sale is not usable or transferable until the launch of the genesis block. Users that have bought ether can check their balances here:
+          </p>
+          {{> etherChecker }}
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
