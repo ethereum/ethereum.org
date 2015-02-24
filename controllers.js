@@ -111,6 +111,12 @@ EtherController = AppController.extend({
   }
 });
 
+CompanyStructureController = AppController.extend({
+  action: function(){
+    this.render("companyStructurePage");
+  }
+});
+
 
 function groupByRows(items, perRow){
   return _.reduce(items, function(groups, item, i){
