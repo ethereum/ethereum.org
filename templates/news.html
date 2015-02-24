@@ -3,10 +3,13 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-8">
-          {{>blogPosts blogFeed}}
+          <section id="blog-posts" class="subsection subsection-left">
+            <h1>Blog</h1>
+            {{>blogPosts blogFeed}}
+          </section>
         </div>
         <div class="col-xs-4">
-          <section id="news-tweets" class="section-flow purple subsection">
+          <section id="news-tweets" class="section-flow purple subsection subsection-right">
             <h1>Twitter</h1>
             {{#each tweetsShort}}
               {{> tweetItem this}}

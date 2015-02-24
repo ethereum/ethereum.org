@@ -1,4 +1,4 @@
-//TODO: modularise if this ever grows
+//TODO: modularise if this ever grows > 200 loc
 
 AppController = RouteController.extend({
   layoutTemplate: "appLayout",
@@ -96,6 +96,12 @@ PartnershipController = AppController.extend({
 MiningController = AppController.extend({
   action: function(){
     this.render("miningPage");
+  }
+});
+
+FoundationController = AppController.extend({
+  action: function(){
+    this.render("foundationPage");
   }
 });
 

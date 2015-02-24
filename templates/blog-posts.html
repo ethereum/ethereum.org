@@ -1,16 +1,15 @@
 <template name="blogPosts">
-    <h1>Blog</h1>
-    {{#each this }}
-      <h3>
-        <a href="{{link}}">{{title}}</a>
-      </h3>
-      <p>
-        Posted by <strong>{{author}}</strong> on {{formatDate pubdate "MMMM Do YYYY"}}.
-      </p>
-      {{#if summary}}
-        <div class="summary text-justify">
-          {{> blogPostSummary summary }}
-        </div>
-      {{/if}}
-    {{/each}}
+  {{#each this }}
+    <h3>
+      <a href="{{link}}">{{title}}</a>
+    </h3>
+    <p>
+      Posted by <strong>{{author}}</strong> on {{formatDate pubdate "MMMM Do YYYY"}}.
+    </p>
+    {{#if summary}}
+      <div class="summary text-justify">
+        {{> blogPostSummary summary }}
+      </div>
+    {{/if}}
+  {{/each}}
 </template>

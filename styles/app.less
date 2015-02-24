@@ -131,13 +131,13 @@ body{
     padding-top: 60px;
   }
   .subsection{
-    padding: 0 20px 80px;
+    padding: 0 20px 60px;
   }
   .headerless{
-    padding-top: 80px;
+    padding-top: 60px;
   }
   h1{
-    padding: 80px 0;
+    padding: 60px 0;
     margin: 0;
   }
   
@@ -163,6 +163,19 @@ body{
     margin-top: -1px;
   }
 }
+
+
+section.section-flow{
+  .subsection-left{
+    margin-right: -15px;
+    padding-right: 30px
+  }
+  .subsection-right{
+    margin-left: -15px;
+    padding-left: 30px;
+  }
+}
+
 #ethereum-org{
   .section-flow{
     /*copy colors*/
@@ -257,14 +270,12 @@ body{
     }
   }
 }
-.point-down{
+.point-down, .subsection.point-from-left, .subsection.point-from-right{
   position: relative;
   &.section-flow{
     padding-bottom: 80px;
   }
-  &:after {
-    top: 100%;
-    left: 50%;
+  &:after{
     border: solid transparent;
     content: " ";
     height: 0;
@@ -274,6 +285,12 @@ body{
     border-width: 30px;
     margin-left: -30px;
     z-index: 10;
+  }
+}
+.point-down{
+  &:after {
+    top: 100%;
+    left: 50%;
   }
   &.dark-blue:after{
     border-top-color: @bg-dark-blue;
@@ -293,8 +310,67 @@ body{
   &.purple:after{
     border-top-color: @bg-purple;
   }
-
 }
+
+.point-from-left:after{
+  /*weirdly only works if no right or left set*/
+  top: 50%;
+  margin-top: -15px;
+}
+.point-from-right:after{
+  right: 0%;
+  top: 50%;
+  margin-top: -30px;
+}
+.blue{
+  .point-from-right:after{
+    border-right-color: @bg-blue;
+  }
+  .point-from-left:after{
+    border-left-color: @bg-blue;
+  }
+} 
+.dark-blue{
+  .point-from-right:after{
+    border-right-color: @bg-dark-blue;
+  }
+  .point-from-left:after{
+    border-left-color: @bg-dark-blue;
+  }
+}
+.red{
+  .point-from-right:after{
+    border-right-color: @bg-red;
+  }
+  .point-from-left:after{
+    border-left-color: @bg-red;
+  }
+}
+.light-grey{
+  .point-from-right:after{
+    border-right-color: @bg-light-grey;
+  }
+  .point-from-left:after{
+    border-left-color: @bg-light-grey;
+  }
+}
+.dark-grey{
+  .point-from-right:after{
+    border-right-color: @bg-dark-grey;
+  }
+  .point-from-left:after{
+    border-left-color: @bg-dark-grey;
+  }
+}
+.purple{
+  .point-from-right:after{
+    border-right-color: @bg-purple;
+  }
+  .point-from-left:after{
+    border-left-color: @bg-purple;
+  }
+}
+
 .popover{
   border-radius:0;
   border-color: #000;
