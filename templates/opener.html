@@ -1,30 +1,13 @@
 <template name="opener">
   <section id="opener" class="section-flow dark-blue">
     <div class="logo">
-      <img src="/images/ethereum_logo.svg"/>
+      <img src="/images/ethereum_logo_PC.svg"/>
     </div>
     <h2 class="tagline">
       Privacy transparency decentralisation
     </h2>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="tweets-container">
-            <div class="scroll">
-              <ul class="tweets">
-                {{#each tweets}}
-                  {{>tweetItem this}}
-                {{/each}}
-              </ul>
-              <ul class="tweets">
-                {{#each tweets}}
-                  {{>tweetItem this}}
-                {{/each}}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <section id="call-to-action">
+      {{> callToAction }}
+    </section>      
   </section>
 </template>
