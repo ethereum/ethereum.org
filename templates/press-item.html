@@ -1,0 +1,18 @@
+<template name="pressItem">
+  <h3>
+    {{#if body }}
+      {{title}}
+    {{else}}
+      <a href="/press">{{title}}</a>
+    {{/if}}
+  </h3>
+  
+  <p>
+    {{formatDate publishedAt "MMMM Do YYYY"}}
+  </p>
+  {{#if body }}
+    <div class="body">
+      {{#markdown}}{{body}}{{/markdown}}
+    </div>
+  {{/if}}
+</template>

@@ -2,20 +2,21 @@
   <section id="news" class="section-flow light-grey">
     <div class="container">
       <div class="row">
-        <div class="col-xs-8">
-          <section id="blog-posts" class="subsection subsection-left">
+        <div class="row-same-height">
+          <section id="blog-posts" class="subsection subsection-left col-xs-8 col-xs-height">
             <h1>Blog</h1>
             {{>blogPosts blogFeed}}
           </section>
-        </div>
-        <div class="col-xs-4">
-          <section id="news-tweets" class="section-flow purple subsection subsection-right">
-            <h1>Twitter</h1>
-            {{#each tweetsShort}}
-              {{> tweetItem this}}
+
+
+          <section id="news-tweets" class="col-xs-4 col-xs-height section-flow purple subsection subsection-right">
+            <h1>Press</h1>
+            {{#each press}}
+              {{> pressItem this}}
             {{/each}}
           </section>
         </div>
+
       </div>
     </div>
     <div class="container pointer">

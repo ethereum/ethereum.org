@@ -58,9 +58,14 @@ body{
   h1{
     font-size: 26px;
   }
+  h3{
+    font-size: 20px;
+  }
   h1, h2, h3{
-    font-family: 'Signika-Regular', sans-serif;
     border:0;
+  }
+  h1, h2, h3, .logo-font{
+    font-family: 'Signika-Regular', sans-serif;
   }
   h2, p{
     margin-bottom: 30px;
@@ -136,10 +141,10 @@ body{
     padding-top: 60px;
   }
   .subsection{
-    padding: 0 20px 60px;
+    padding: 0 50px 60px;
   }
   .headerless{
-    padding-top: 60px;
+    padding-top: 80px;
   }
   h1{
     padding: 60px 0;
@@ -169,17 +174,6 @@ body{
   }
 }
 
-
-section.section-flow{
-  .subsection-left{
-    margin-right: -15px;
-    padding-right: 30px
-  }
-  .subsection-right{
-    margin-left: -15px;
-    padding-left: 30px;
-  }
-}
 
 #ethereum-org{
   .section-flow{
@@ -223,8 +217,9 @@ section.section-flow{
       }
     }
     
-    &.red,&.purple,&.blue{
+    &.red,&.purple,&.subsection.purple,&.blue{
       a{
+        font-family: 'Roboto-Medium';
         color: #000;
         &:hover{
           color: @text-light-grey;
@@ -275,6 +270,7 @@ section.section-flow{
     }
   }
 }
+
 .point-down, .subsection.point-from-left, .subsection.point-from-right{
   position: relative;
   &.section-flow{
@@ -318,9 +314,9 @@ section.section-flow{
 }
 
 .point-from-left:after{
-  /*weirdly only works if no right or left set*/
   top: 50%;
   margin-top: -15px;
+  left: 30px;
 }
 .point-from-right:after{
   right: 0%;
