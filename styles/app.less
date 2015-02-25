@@ -150,7 +150,7 @@ body{
     padding: 60px 0;
     margin: 0;
   }
-  
+  background-color: #fff;
   &.dark-blue{
     background-color: @bg-dark-blue;
   }
@@ -294,6 +294,9 @@ body{
   &:after {
     top: 100%;
     left: 50%;
+  }
+  &:after, &.subsection:after{
+    border-top-color: #fff;
   }
   &.dark-blue:after{
     border-top-color: @bg-dark-blue;
