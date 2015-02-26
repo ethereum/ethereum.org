@@ -24,27 +24,27 @@ Plugins = {
     opt = _.extend({
       durationFactor: 10000
     }, opt);
-    
+
     var scroll = function(){
       var $scrollers = $el.children(),
           w = $scrollers.first().outerWidth(),
-          duration = opt.durationFactor * (w / 250);
+          duration = opt.durationFactor * (w/250);
 
-      $scrollers.velocity({
-        "translateX": - w
-      }, {
-        duration: duration,
-        easing: "linear",
-        complete: function(){
-          if(run){
-            setTimeout(function(){
-              $scrollers.velocity({translateX: 0},{duration: 0, complete: scroll});
-            }, duration ? 0 : 200);
-          }
-        }
+      $scrollers.css({
+        "transition": "transform " + duration + "ms linear",
+        "-webkit-transition": "-webkit-transform " + duration + "ms linear",
+        "transform": "translate(-" + w + "px,0px)"
       });
+      setTimeout(function(){
+        if(run){
+          //$scrollers.css("transition", "none");
+          $scrollers.css("transform", "translate(0,0)");
+          setTimeout(function(){
+            scroll();
+          }, duration ? 0 : 200);
+        }
+      }, duration);
     };
-
 
     scroll();
 
