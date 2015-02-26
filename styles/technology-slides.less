@@ -1,3 +1,5 @@
+@import "lib/colors.less";
+
 #technology-slides{
   .carousel {
     height:470px;
@@ -15,6 +17,12 @@
       img{
         height: 300px;
       }
+    }
+  }
+  .carousel-indicators li{
+    border-color: @text-purple;
+    &.active{
+      background-color: @bg-purple;
     }
   }
 }

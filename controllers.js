@@ -26,10 +26,10 @@ HomeController = AppController.extend({
       youtubeVideos: YoutubeVideos.find({},{limit:9, sort: {pubDate: -1}}),
       blogFeed: FeedEntries.find({feed_category: "Blog"}, {limit: 3, sort: {pubdate: -1}}),
       tweets: FeedEntries.find({feed_category: "Twitter"}, {limit: 15, sort: {pubdate: -1}}),
-      //tweetsShort: FeedEntries.find({feed_category: "Twitter"}, {limit: 5, sort: {pubdate: -1}}),
       press: PressReleases.find({}, {fields: {body: 0},limit: 20, sort: {publishedAt: -1}}),
       projectGroups: groupByRows(FeaturedProjects.find().fetch(), 3),
       featuredInGroups: groupByRows(FeaturedIn.find().fetch(), 5),
+      featuredIn: FeaturedIn.find().fetch(),
       augmentingNav: true
     };
   },

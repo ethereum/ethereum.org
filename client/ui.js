@@ -17,14 +17,18 @@ UI = {
   deaugmentNav: function(handler){
     $(window).off("scroll",handler);
   },
-  autoscroll: function($el){
+  autoscroll: function($el,opt){
     var run = true,
         stop = function(){ run = false; };
+    
+    opt = _.extend({
+      durationFactor: 10000
+    }, opt);
     
     var scroll = function(){
       var $fChild = $el.children().first(),
           w = $fChild.outerWidth(),
-          duration = 10000 * (w / 250);
+          duration = opt.durationFactor * (w / 250);
 
       $fChild.velocity({
         "margin-left": - w

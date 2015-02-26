@@ -1,0 +1,22 @@
+<template name="scrollingFeaturedInItem">
+  <li>
+    <a href="{{url}}">
+      <img src="{{logo}}"/>
+    </a>
+  </li>
+</template>
+
+<template name="scrollingFeaturedIn">
+  <section id="scrolling-featured-in" class="section-flow dark-blue point-down">
+    <div class="container">
+      <h1>Featured in</h1>
+    </div>
+    {{#autoscroll durationFactor=1000 }}
+      <ul>
+        {{#each featuredIn }}
+          {{>scrollingFeaturedInItem this}}
+        {{/each}}
+      </ul>
+    {{/autoscroll}}
+  </section>
+</template>

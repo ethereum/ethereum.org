@@ -1,16 +1,11 @@
 <template name="scrollingTweets">
   <div class="tweets-container">
-    <div class="scroll">
+    {{#autoscroll}}
       <ul class="tweets">
         {{#each tweets}}
           {{>tweetItem this}}
         {{/each}}
       </ul>
-      <ul class="tweets">
-        {{#each tweets}}
-          {{>tweetItem this}}
-        {{/each}}
-      </ul>
-    </div>
+    {{/autoscroll}}
   </div>
 </template>
