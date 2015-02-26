@@ -1,4 +1,5 @@
 @import "lib/colors.less";
+@import "lib/elements.less";
 
 #opener{
   position: relative;
@@ -21,6 +22,21 @@
     word-spacing: 5px;
     font-style: italic;
     margin-bottom: 25px;
+    position: relative;
+    height: 20px;
+    li{
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 500px;
+      margin-left: -250px;
+      white-space: nowrap;
+      opacity: 0;
+      .transition(opacity, 3s);
+      &.active{
+        opacity: 1;
+      }
+    }
   }
   .overlay{
     width: 100px;
