@@ -140,7 +140,7 @@ body{
   .subsection{
     padding: 0 50px 60px;
   }
-  .headerless{
+  &.headerless{
     padding-top: 80px;
   }
   h1{
@@ -149,8 +149,7 @@ body{
   }
   background-color: #fff;
   &.dark-blue{
-    background-color: @bg-dark-blue;
-    background: url("/images/Ethereum-BGD_4K_2.png") center center no-repeat;
+    background: url("/images/Ethereum-BGD_4K_2.png") center center no-repeat @bg-dark-blue;
     background-size: cover;
   }
   &.red{

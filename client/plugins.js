@@ -1,4 +1,4 @@
-UI = {
+Plugins = {
   augmentingNav: function($el, cssClass){
     var handler;
     
@@ -19,34 +19,32 @@ UI = {
   },
   autoscroll: function($el,opt){
     var run = true,
-        stop = function(){ run = false; };
+        stop = function(){  run = false; };
     
     opt = _.extend({
       durationFactor: 10000
     }, opt);
     
     var scroll = function(){
-      var $fChild = $el.children().first(),
-          w = $fChild.outerWidth(),
+      var $scrollers = $el.children(),
+          w = $scrollers.first().outerWidth(),
           duration = opt.durationFactor * (w / 250);
 
-      $fChild.velocity({
-        "margin-left": - w
+      $scrollers.velocity({
+        "translateX": - w
       }, {
         duration: duration,
         easing: "linear",
         complete: function(){
           if(run){
             setTimeout(function(){
-              $fChild.detach();
-              $fChild.css("margin-left", 0);
-              $el.append($fChild);
-              scroll();
+              $scrollers.velocity({translateX: 0},{duration: 0, complete: scroll});
             }, duration ? 0 : 200);
           }
         }
       });
     };
+
 
     scroll();
 

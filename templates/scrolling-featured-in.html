@@ -7,10 +7,7 @@
 </template>
 
 <template name="scrollingFeaturedIn">
-  <section id="scrolling-featured-in" class="section-flow dark-blue point-down">
-    <div class="container">
-      <h1>Featured in</h1>
-    </div>
+  <section id="scrolling-featured-in" class="section-flow dark-blue point-down headerless">
     {{#autoscroll durationFactor=1000 }}
       <ul>
         {{#each featuredIn }}
