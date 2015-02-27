@@ -37,9 +37,10 @@ Plugins = {
       });
       setTimeout(function(){
         if(run){
-          //$scrollers.css("transition", "none");
+          $scrollers.css("transition", "none");
           $scrollers.css("transform", "translate(0,0)");
           setTimeout(function(){
+            console.log("scroll!");
             scroll();
           }, duration ? 0 : 200);
         }

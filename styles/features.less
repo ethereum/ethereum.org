@@ -1,5 +1,8 @@
+@import "lib/elements";
+@import "lib/media";
+
+
 #features{
-  padding: 40px 20px 0;
   h3, p{
     text-align: center;
   }
@@ -10,6 +13,63 @@
     margin-top: 20px;
   }
   .thumbnail{
-    padding: 10px 40px;
+    margin: 0 20% 30%;
+  }
+  .easy-to-use{
+    padding: 16.8% 0;
+  }
+  .feature-container{
+    height: 300px;
+    overflow: hidden;
+  }
+  .slideup{
+    position: relative;
+    p{
+      opacity: 0;
+      .transform(translateY(40%));
+      .transition(all, 0.5s);
+    }
+    .thumbnail{
+      opacity: 1;
+      .transition(opacity, 0.2s);
+    }
+    .transform(translateY(0));
+    .transition(transform, 0.5s);
+    &:hover{
+      p{
+        opacity: 1;
+        .transform(translateY(0));
+      }
+      .thumbnail{
+        opacity: 0;
+      }
+      .transform(translateY(-48%));
+    }
+  }
+  @media(min-width: @sm-min){
+    .thumbnail{
+      margin-top: 60%;
+      margin-bottom: 80%;
+    }
+    .feature-container{
+      height: 500px;
+    }
+  }
+  @media(min-width: @md-min){
+    .thumbnail{
+      margin-top: 27%;
+      margin-bottom: 35%;
+    }
+    .feature-container{
+      height: 370px;
+    }
+  }
+  @media(min-width: @lg-min){
+    .thumbnail{
+      margin: 0 20% 30%;
+    }
+    .feature-container{
+      height: 300px;
+    }
   }
 }
