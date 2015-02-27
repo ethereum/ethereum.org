@@ -1,13 +1,18 @@
+var DUCK_PERIOD = 10000,//ms
+    DUCK_PROBABILITY = 0.025,
+    DUCK_DURATION = 400;//ms
+    
+
 var toDuckOrNotToDuck = _.throttle(function(){
   var x = Math.random();
-  if(x < 0.025){
+  if(x < DUCK_PROBABILITY){
     Session.set("engage-the-duck", true);
 
     setTimeout(function(){
       Session.set("engage-the-duck", false);
-    }, 400);
+    }, DUCK_DURATION);
   }
-}, 10000, {leading: false});
+}, DUCK_PERIOD, {leading: false});
 
 Template.duck.rendered = function(){
   $(document).on("mousemove",toDuckOrNotToDuck);
