@@ -1,6 +1,5 @@
 <template name="pressReleases">
-  <section id="press-releases" class="section-flow headerless">
-    {{#each this}}
-    {{/each}}
-  </section>
+  {{#each this}}
+    {{> pressItem this}}
+  {{/each}}
 </template>

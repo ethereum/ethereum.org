@@ -1,19 +1,16 @@
 <template name="pressPage">
   <div class="page" id="press-page">
-    <div class="section-flow red">
-      <div class="container">
-        <h1>Press</h1>
-      </div>
-    </div>
-    <section id="press-releases" class="section-flow blue">
+    <section id="press-releases" class="section-flow light-grey at-page-top">
       <div class="container">
         <div class="row">
           <div class="col-xs-8">
+            <h1>Press</h1>
             {{> pressReleases press }}
           </div>
           <div class="col-xs-4">
-            <section class="subsection section-flow light-grey">
+            <section class="subsection section-flow dark-blue">
               {{>tweets tweets}}
+              <h1>Blog</h1>
               {{>blogPosts blogFeed}}
             </section>
           </div>

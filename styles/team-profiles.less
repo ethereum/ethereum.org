@@ -8,19 +8,13 @@
     &:not(:first-of-type){
       padding-top: 80px;
     }
-    &:nth-child(3n+1){
+    &:nth-child(odd){
       background-color: @bg-light-grey;
       h2, p{
         color: #333;
       }
     }
-    &:nth-child(3n+2){
-      background-color: @bg-blue;
-      h2, p{
-        color: #fff;
-      }
-    }
-    &:nth-child(3n+3){
+    &:nth-child(even){
       background-color: @bg-dark-blue;
       h2, p{
         color: #fff;

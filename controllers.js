@@ -52,12 +52,10 @@ TeamController = AppController.extend({
     this.render("teamPage");
   },
   data: function(){
-    var profiles = lodash.indexBy(TeamProfiles.find().fetch(), "_id"),
-        order = (TeamProfileSortOrder.findOne() || {}).order;
     return {
-      profiles: _.map(order, function(p, i){
+      profiles: _.map(lodash.shuffle(TeamProfiles.find().fetch()), function(p, i){
         return {
-          profile:profiles[p.id],
+          profile: p,
           index: i
         };
       })
