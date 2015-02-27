@@ -1,3 +1,6 @@
+@import "lib/colors";
+@import "lib/elements";
+
 #videos{
   .thumbnail{
     margin: 0;
@@ -9,18 +12,19 @@
       margin: 0;
     }
     .title{
-      display: none;
+      opacity: 0;
       color: #fff;
       position: absolute;
       left: 0;
       top: 0;
       height: 100%;
-      background-color: rgba(0,0,0,0.6);
+      .bg-rgba-dark-blue();
       padding: 20px 10px;
+      .transition(opacity,0.3s);
     }
     &:hover{
       .title{
-        display: block;
+        opacity: 1;
       }
     }
   }

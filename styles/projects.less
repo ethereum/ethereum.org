@@ -4,14 +4,16 @@
 #projects{
   .thumbnail{
     border: 0;
-    height: 130px;
+    height: 120px;
     background-color: transparent;
     margin-bottom: 0;
+    vertical-align: middle;
     img{
-      max-height: 100px;
+      max-height: 90px;
       &.smaller{
         max-height: 70px;
-        margin-top: 15px;
+        margin-top: 7px;
+        margin-bottom: 8px;
       }
     }
   }
@@ -32,28 +34,5 @@
     vertical-align: top;
   }
 
-  td{
-    height: 316px;
-    padding-top: 50px;
-  }
-
-  @media(min-width: @sm-min){
-    td{
-      padding-top: 10px;
-      height: 210px;
-    }
-  }
-  @media(min-width: @md-min){
-    td{
-      height: 284px;
-      padding-top: 40px;
-    }
-  }
-  @media(min-width: @lg-min){
-    td{
-      height: 350px;
-      padding-top: 80px;
-    }
-  }
 }
 

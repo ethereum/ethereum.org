@@ -9,7 +9,7 @@ html {
 #main-footer{
   min-width: 980px;
   background-color: @bg-dark-blue;
-  border-top: 3px solid @bg-red;
+  border-top: 2px solid @bg-red;
   color: #fff;
   position: absolute;
   bottom: 0;
@@ -17,9 +17,12 @@ html {
   height: @footer-height;
   padding-top: 30px;
 
-  .copyright{
+  .legal{
     font-size: 12px;
-    margin: 15px 0; 
+    margin-top: 15px;
+    p{
+      margin-bottom: 10px;
+    }
   }
 
   .link-list-container{
@@ -40,6 +43,15 @@ html {
   }
   .logo{
     width: 150px;
+  }
+  #media-links{
+    margin-top: 30px;
+    a{
+      color: @bg-purple;
+      &:hover{
+        color: #fff;
+      }
+    }
   }
 }
 

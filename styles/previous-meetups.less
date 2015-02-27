@@ -1,3 +1,6 @@
+@import "lib/colors";
+@import "lib/elements";
+
 #previous-meetups{
   padding-bottom:50px;
   .thumbnail{
@@ -5,6 +8,16 @@
     padding: 0;
     position: relative;
     margin:0;
+    .title{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top:0;
+      left:0;
+      opacity: 0;
+      .bg-rgba-dark-blue();
+      .transition(opacity,0.3s);
+    }
     span{
       z-index:100;
       position:absolute;
@@ -13,7 +26,6 @@
       width:100%;
       display:block;
       text-align:center;
-      background:black;
       color:white;
       height:30px;
       line-height:30px;
@@ -23,8 +35,13 @@
     img{
       z-index:50;
     }
-    &:hover span{
-      opacity:100;
-    }
+    &:hover{
+      .title{
+        opacity: 1;
+      }
+      span{
+        opacity:1;
+      }
+    } 
   }
 }

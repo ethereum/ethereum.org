@@ -69,9 +69,12 @@ body{
   }
   .thumbnail{
     border-radius: 0;
+    background-color: transparent;
+    &:hover{
+      border-color: @text-dark-blue;
+    }
     &.no-decoration{
       border: 0;
-      background-color: transparent;
     }
   }
   ul{
@@ -294,8 +297,8 @@ body{
     left: 50%;
   }
   &:after, &.subsection:after{
-    border-top-color: #fff;
-  }
+             border-top-color: #fff;
+           }
   &.dark-blue:after{
     border-top-color: @bg-dark-blue;
   }
