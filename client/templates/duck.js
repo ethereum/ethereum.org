@@ -1,5 +1,5 @@
-var DUCK_PERIOD = 10000,//ms
-    DUCK_PROBABILITY = 0.025,
+var DUCK_PERIOD = 30000,//ms
+    DUCK_PROBABILITY = 0.0025,
     DUCK_DURATION = 400;//ms
     
 
