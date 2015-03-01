@@ -3,33 +3,18 @@
     <div class="logo">
       <img src="/images/ethereum_logo_PC.svg"/>
     </div>
-    <h2 class="tagline">
+    
+    <h2 class="blurboid" data-blurb-id="{{_id}}">
       <ul>
-        <li class="active">Privacy transparency decentralisation</li>
-        <li>The evolution of interaction</li>
-        <li>Reinventing the digital economy</li>
-        <li>Blockchain, evolved</li>
-        <li>A platform for decentalized applications</li>
-        <li>The revolution will be decentralized</li>
-        <li>Universal disintermediation</li>
-        <li>Emerging decentralized global economy</li>
-        <li>Mirrorball for the panopticon</li>
-        <li>NSA not required</li>
-        <li>ethernet + interwebs + cats* - NSA = ethereum</li>
-        <li>*with extra cats</li>
-        <li>Your on ramp to the off ramp</li>
-        <li>Glass floors, glass walls, no glass ceiling</li>
-        <li>Lowering barriers to entry</li>
-        <li>Business start-up costs? Less than 1 ETH (a few cents)</li>
-        <li>Microfinancing global change</li>
-        <li>Social Operating System for Planet Earth</li>
-        <li>Web 3.0</li>
-        <li>Decentralized World Wide Web (dW3)</li>
-        <li>Post-Snowden Apps and Comms Platform</li>
-        <li>Post-Snowden Economy</li>
-        <li>Radical transparency (eth) meets perfect privacy (shh)</li>
+        {{#momentum plugin="fade2" duration=2000}}
+          {{#each blurboids}}
+            <li>{{text}}</li>
+          {{/each}}
+        {{/momentum}}
       </ul>
     </h2>
+    
+    <h1 class="tagline">A platform for decentalized applications</h1>
     <section id="call-to-action">
       {{> callToAction }}
     </section>      

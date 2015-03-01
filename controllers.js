@@ -18,6 +18,7 @@ HomeController = AppController.extend({
     this.subscribe("featuredProjects");
     this.subscribe("featuredIn");
     this.subscribe("pressReleases");
+    this.subscribe("blurboids");
   },
   data: function(){
     return {

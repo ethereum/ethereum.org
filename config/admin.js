@@ -34,6 +34,11 @@ AdminConfig = {
         { label: "Date", name: "publishedAt" }
       ],
       omitFields: ["publishedAt"]
+    },
+    Blurboids: {
+      tableColumns: [
+        {label: "Text", name: "text"}
+      ]
     }
   }
 };
