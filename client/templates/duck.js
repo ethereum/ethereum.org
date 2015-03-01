@@ -2,6 +2,10 @@ var DUCK_PERIOD = 30000,//ms
     DUCK_PROBABILITY = 0.0025,
     DUCK_DURATION = 400;//ms
     
+// easter duck egg
+//     _      _      _
+//   >(.)__ <(.)__ =(.)__
+//    (___/  (___/  (___/ 
 
 var toDuckOrNotToDuck = _.throttle(function(){
   var x = Math.random();
