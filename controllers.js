@@ -117,6 +117,11 @@ CompanyStructureController = AppController.extend({
   }
 });
 
+LicensingController = AppController.extend({
+  action: function(){
+    this.render("licensingPage");
+  }
+});
 
 function groupByRows(items, perRow){
   return _.reduce(items, function(groups, item, i){

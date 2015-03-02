@@ -15,12 +15,9 @@ Momentum.registerPlugin('fade2', function(options) {
       $(node).velocity('fadeOut', {
         duration: options.duration || 200,
         complete: function() {
-          console.log($(this));
           $(this).remove();
         }
       });
-      
     }
-    
-  }
+  };
 });

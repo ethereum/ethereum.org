@@ -20,4 +20,4 @@ Router.route("/ether");
 
 Router.route("/company-structure");
 
-
+Router.route("/licensing");
