@@ -4,19 +4,16 @@
       <div class="row">
         <div class="row-same-height">
           <section id="blog-posts" class="subsection subsection-left col-xs-8 col-xs-height">
-            <h1>Blog</h1>
+            <h1><a href="https://blog.ethereum.org/">Blog</a></h1>
             {{>blogPosts blogFeed}}
           </section>
-
-
           <section id="news-tweets" class="col-xs-4 col-xs-height section-flow light-grey subsection subsection-right">
-            <h1>Press</h1>
+            <h1><a href="/press">Press</a></h1>
             {{#each press}}
               {{> pressItem this}}
             {{/each}}
           </section>
         </div>
-
       </div>
     </div>
     <div class="container pointer">

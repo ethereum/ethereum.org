@@ -1,5 +1,5 @@
 var _ = lodash,
-    UPDATE_INTERVAL = 7000;
+    UPDATE_INTERVAL = 5000;
 
 Template.opener.rendered = function(){
   var randomBlurb = function(curId){
@@ -17,7 +17,7 @@ Template.opener.rendered = function(){
 
   this._updateInterval = setInterval(update,UPDATE_INTERVAL);
 
-  update();
+  Session.set("currentBlurboid", {text: "A platform for decentralised applications"});
 };
 
 Template.opener.destroyed = function(){
