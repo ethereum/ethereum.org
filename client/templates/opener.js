@@ -17,7 +17,7 @@ Template.opener.rendered = function(){
 
   this._updateInterval = setInterval(update,UPDATE_INTERVAL);
 
-  Session.set("currentBlurboid", {text: "A platform for decentralized applications"});
+  update();
 };
 
 Template.opener.destroyed = function(){
