@@ -5,7 +5,7 @@ Template.opener.rendered = function(){
   var randomBlurb = function(curId){
     return _(Blurboids.find().fetch()).filter(function(item){
       return item._id !== curId && !item.appearAfter;
-    }).sample();
+    }).sample() || {text: "Web 3.0"};
   }, update = function(){
     var cur = Session.get("currentBlurboid"),
         next = cur && _.findWhere(Blurboids.find({appearAfter: {$exists: true}}).fetch(), {
