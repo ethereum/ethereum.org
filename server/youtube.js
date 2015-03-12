@@ -15,24 +15,26 @@ Meteor.startup(function(){
         channelId: Meteor.settings.YOUTUBE_ETHEREUM_CHANNEL_ID
       }, function(err, data){
         var Fiber = Npm.require("fibers");
-        
-        _.each(data.items, function(item){
-          var id = item.id.videoId;
-          Fiber(function(){
-            if(!YoutubeVideos.find({_id:id}).count()){
-              
-              console.log("inserting a vid:", id);
-              
-              YoutubeVideos.insert({
-                _id: id,
-                url: "http://www.youtube.com/watch?v=" + id,
-                pubDate: new Date(item.snippet.publishedAt),
-                thumbnails: item.snippet.thumbnails,
-                description: item.snippet.description
-              });
-            }
-          }).run();
-        });
+
+        if(data){
+          _.each(data.items, function(item){
+            var id = item.id.videoId;
+            Fiber(function(){
+              if(!YoutubeVideos.find({_id:id}).count()){
+                
+                console.log("inserting a vid:", id);
+                
+                YoutubeVideos.insert({
+                  _id: id,
+                  url: "http://www.youtube.com/watch?v=" + id,
+                  pubDate: new Date(item.snippet.publishedAt),
+                  thumbnails: item.snippet.thumbnails,
+                  description: item.snippet.description
+                });
+              }
+            }).run();
+          });
+        }
       });
     };
 
