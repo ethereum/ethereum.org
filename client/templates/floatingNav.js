@@ -1,9 +1,9 @@
 Template.floatingNav.rendered = function(){
-  this._augHandler = Plugins.augmentingNav($(this.firstNode), "shifted");
+  //this._augHandler = Plugins.augmentingNav($(this.firstNode), "shifted");
 };
 
 Template.floatingNav.destroyed = function(){
-  Plugins.deaugmentNav(this._augHandler);
+  //Plugins.deaugmentNav(this._augHandler);
 };
 
 
