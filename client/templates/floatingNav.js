@@ -9,10 +9,6 @@ Template.floatingNav.destroyed = function(){
 
 Template.floatingNav.events({
   "click a": function(e, tmpl){
-    $($(e.currentTarget).attr("href")).velocity("scroll", {
-      duration: 400,
-      easing: "ease-out",
-      offset: -$(".navbar").height()
-    });
+    Plugins.scrollTo($($(e.currentTarget).attr("href")));
   }
 });

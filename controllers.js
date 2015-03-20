@@ -1,9 +1,20 @@
 //TODO: modularise if this ever grows > 200 loc
 
+if(Meteor.isClient){
+  $(window).load(function(){
+    Plugins.scrollTo($(window.location.hash));
+  });
+}
+
 AppController = RouteController.extend({
   layoutTemplate: "appLayout",
   onAfterAction: function(){
-    window.scrollTo(0,0);
+    var h = window.location.hash;
+    if(h){
+      Plugins.scrollTo($(h));
+    }else{
+      window.scrollTo(0,0);
+    }
   },
   action: function(){
     throw new Error("action: override me!");

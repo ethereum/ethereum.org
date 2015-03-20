@@ -1,4 +1,11 @@
 Plugins = {
+  scrollTo: function($el){
+    return $el.velocity("scroll", {
+      duration: 400,
+      easing: "ease-out",
+      offset: -$(".navbar").height()
+    });
+  },
   augmentingNav: function($el, cssClass){
     var handler;
     
