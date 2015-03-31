@@ -33,3 +33,4 @@ markdown
 yogiben:autoform-file@=0.2.0
 cfs:standard-packages
 cfs:filesystem
+mycartio:newrelic
