@@ -272,6 +272,31 @@ body{
       }
     }
   }
+
+  .popover{
+    border-radius:0;
+    border-color: #000;
+    font-family: 'Roboto-Light', sans-serif;
+    padding: 0;
+    background-color: rgba(255,255,255,1);
+    color: #333;
+    max-width: 400px;
+    .popover-title{
+      background-color: rgba(0,0,0,0.8);
+      color: #fff;
+      border-radius: 0;
+      border: 0;
+    }
+    .arrow{
+      border-right-color: #000 !important;
+    }
+    .popover-content{
+      p:last-of-type{
+        margin-bottom: 0;
+      }
+    }
+  }
+
 }
 
 .point-down, .subsection.point-from-left, .subsection.point-from-right{
@@ -378,22 +403,6 @@ body{
   }
 }
 
-.popover{
-  border-radius:0;
-  border-color: #000;
-  font-family: 'Roboto-Light', sans-serif;
-  padding: 0;
-  background-color: rgba(255,255,255,1);
-  .popover-title{
-    background-color: rgba(0,0,0,0.8);
-    color: #fff;
-    border-radius: 0;
-    border: 0;
-  }
-  .arrow{
-    border-right-color: #000 !important;
-  }
-}
 
 table.multicolored{
   table-layout: fixed;
