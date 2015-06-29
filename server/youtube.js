@@ -29,7 +29,7 @@ Meteor.startup(function(){
                   url: "http://www.youtube.com/watch?v=" + id,
                   pubDate: new Date(item.snippet.publishedAt),
                   thumbnails: item.snippet.thumbnails,
-                  description: item.snippet.description
+                  title: item.snippet.title
                 });
               }
             }).run();

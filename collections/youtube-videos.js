@@ -11,7 +11,7 @@ YoutubeVideos.attachSchema(new SimpleSchema({
   pubDate: {
     type: Date
   },
-  description: {
+  title: {
     type: String,
     optional: true
   }
@@ -20,6 +20,6 @@ YoutubeVideos.attachSchema(new SimpleSchema({
 
 if(Meteor.isServer){
   Meteor.publish("youtubeVideos", function(){
-    return YoutubeVideos.find({}, {limit: 10});
+    return YoutubeVideos.find({}, {limit: 10, sort: {pubDate: -1}});
   });
 }
