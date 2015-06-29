@@ -20,7 +20,7 @@ Meteor.startup(function(){
           _.each(data.items, function(item){
             var id = item.id.videoId;
             Fiber(function(){
-              if(!YoutubeVideos.find({_id:id}).count()){
+              if(!YoutubeVideos.find({_id:id}).count() && item.snippet.publishedAt){
                 
                 console.log("inserting a vid:", id);
                 

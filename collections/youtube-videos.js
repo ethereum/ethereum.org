@@ -12,7 +12,8 @@ YoutubeVideos.attachSchema(new SimpleSchema({
     type: Date
   },
   description: {
-    type: String
+    type: String,
+    optional: true
   }
 }));
 
