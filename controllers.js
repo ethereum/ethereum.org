@@ -49,14 +49,6 @@ HomeController = AppController.extend({
   }
 });
 
-SignInController = AppController.extend({
-  subsciptions: function(){
-    return Meteor.subscribe("users");
-  },
-  action: function(){
-    this.render("adminSignInPage");
-  }
-});
 
 TeamController = AppController.extend({
   // team collections are always published (due to yogiben's admin being an utter shit)

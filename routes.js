@@ -2,8 +2,8 @@ Router.route("/",{
   name: "home"
 });
 
-Router.route("/signin",{
-  name: "signIn"
+Router.route("/signin",function(){
+  this.render("adminSignInPage");
 });
 
 Router.route("/team");
